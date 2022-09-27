@@ -2,6 +2,7 @@ public class Main {
 
     public static void main(String[] args) {
         Adventure game = new Adventure();
-        game.start();
+        UserInterface userInterface = new UserInterface(game);
+        userInterface.start();
     }
 }
