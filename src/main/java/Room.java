@@ -17,19 +17,19 @@ public class Room {
     }
 
     public void setNorth(Room room){
-        room.north = room;
+        this.north = room;
     }
 
     public void setSouth(Room room){
-        room.south = room;
+        this.south = room;
     }
 
     public void setEast(Room room){
-        room.east = room;
+        this.east = room;
     }
 
     public void setWest(Room room){
-        room.west = room;
+        this.west = room;
     }
 
     public Room getSouth(){
@@ -43,5 +43,17 @@ public class Room {
         if(south == null){
             return false;
         }else return true;
+    }
+
+    @Override
+    public String toString() {
+        return "Room{" +
+                "roomName='" + roomName + '\'' +
+                ", roomDescription='" + roomDescription + '\'' +
+                ", north=" + north +
+                ", south=" + south +
+                ", east=" + east +
+                ", west=" + west +
+                '}';
     }
 }

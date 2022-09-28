@@ -24,17 +24,53 @@ public class Adventure {
         Room room8 = new Room("Room8", "");
 
         Room room9 = new Room("Room9", "");
+
         //Room 1 connections
         room1.setEast(room2);
         room1.setSouth(room4);
 
+        //Room 2 connections
+        room2.setEast(room3);
+        room2.setWest(room1);
+
+        //Room 3 connections
+        room3.setWest(room2);
+        room3.setSouth(room6);
+
+        //Room 4 connections
+        room4.setNorth(room1);
+        room4.setSouth(room7);
+
+        //Room 5 connections
+        room5.setSouth(room8);
+
+        //Room 6 connections
+        room6.setNorth(room3);
+        room6.setSouth(room9);
+
+        //Room 7 connections
+        room7.setNorth(room4);
+        room7.setEast(room8);
+
+        //Room 8 connections
+        room8.setNorth(room5);
+        room8.setEast(room9);
+        room8.setWest(room7);
+
+        //Room 9 connections
+        room9.setWest(room8);
+        room9.setNorth(room6);
+
         currentRoom = room1;
     }
 
-    public boolean go(String direction) {
+    public boolean go(String direction, Room currentRoom) {
         if (direction.equalsIgnoreCase("south")) {
+            System.out.println(currentRoom.getSouth());
             if (currentRoom.getSouth() != null) {
-                currentRoom = currentRoom.getSouth();
+                System.out.println(currentRoom.getSouth());
+                currentRoom.setSouth(currentRoom.getSouth());
+
                return true;
             }
         }return false;

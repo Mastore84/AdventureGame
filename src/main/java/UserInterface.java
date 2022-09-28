@@ -14,7 +14,7 @@ public class UserInterface {
         if (userInput.equals("look")) {
             System.out.println(game.getRoomDescription());
         }else if(userInput.equalsIgnoreCase("go south")){
-            game.go("south");
+            //game.go("south");
             System.out.println(game.getRoomDescription());
         }
     }
