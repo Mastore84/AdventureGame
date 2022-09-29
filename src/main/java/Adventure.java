@@ -81,9 +81,9 @@ public class Adventure {
         return currentRoom.getRoomDescription();
     }
 
-    /*public void start(){
-        userInterface.acceptInput();
-        //System.out.println(room1.getRoomDescription());
-        //System.out.println(room5.getRoomDescription());
-    }*/
+    public void start() {
+        /*userInterface.acceptInput();
+        System.out.println(room1.getRoomDescription());
+        System.out.println(room5.getRoomDescription());*/
+    }
 }

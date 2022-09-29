@@ -44,16 +44,4 @@ public class Room {
             return false;
         }else return true;
     }
-
-    @Override
-    public String toString() {
-        return "Room{" +
-                "roomName='" + roomName + '\'' +
-                ", roomDescription='" + roomDescription + '\'' +
-                ", north=" + north +
-                ", south=" + south +
-                ", east=" + east +
-                ", west=" + west +
-                '}';
-    }
 }
