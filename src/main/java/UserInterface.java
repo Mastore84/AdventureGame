@@ -10,23 +10,23 @@ public class UserInterface {
         game.createMap();
     }
     public void start() {
-        System.out.println(game.getRoomDescription());
+        System.out.println("You enter the room.");
         while (shouldContinue){
             userInput = sc.nextLine();
             if (userInput.equals("look")) {
                 System.out.println(game.getRoomDescription());
             }else if(userInput.equalsIgnoreCase("go south")){
                 game.go("south");
-                System.out.println(game.getRoomDescription());
+                System.out.println("You enter the room.");
             }else if(userInput.equalsIgnoreCase("go north")){
                 game.go("north");
-                System.out.println(game.getRoomDescription());
+                System.out.println("You enter the room.");
             }else if(userInput.equalsIgnoreCase("go east")){
                 game.go("east");
-                System.out.println(game.getRoomDescription());
+                System.out.println("You enter the room.");
             }else if(userInput.equalsIgnoreCase("go west")){
                 game.go("west");
-                System.out.println(game.getRoomDescription());
+                System.out.println("You enter the room.");
             }else if (userInput.equalsIgnoreCase("exit")){
                 System.out.println("Goodbye! Thanks for playing!");
                 shouldContinue = false;
