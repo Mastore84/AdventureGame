@@ -4,7 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="8412eb39-467b-4513-8f18-402307c7a2d0" name="Changes" comment="After help from Tine">
+    <list default="true" id="8412eb39-467b-4513-8f18-402307c7a2d0" name="Changes" comment="Altered set methods">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/Adventure.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Adventure.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Main.java" afterDir="false" />
@@ -71,7 +71,14 @@
       <option name="project" value="LOCAL" />
       <updated>1664286940246</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="Altered set methods">
+      <created>1664358327693</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1664358327693</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -89,17 +96,11 @@
     <MESSAGE value="Initial commit" />
     <MESSAGE value="Added some descriptions and minor code" />
     <MESSAGE value="After help from Tine" />
-    <option name="LAST_COMMIT_MESSAGE" value="After help from Tine" />
+    <MESSAGE value="Altered set methods" />
+    <option name="LAST_COMMIT_MESSAGE" value="Altered set methods" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/Adventure.java</url>
-          <line>68</line>
-          <option name="timeStamp" value="4" />
-        </line-breakpoint>
-      </breakpoints>
       <default-breakpoints>
         <breakpoint enabled="true" type="java-exception" />
       </default-breakpoints>

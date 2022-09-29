@@ -13,7 +13,7 @@ public class Adventure {
         Room room3 = new Room("Room3", "You arrive in an ancient dungeon jail..\n" +
                 "What meets you is the remains of a giant troll, its skeletons embracing the ancient chains");
 
-        Room room4 = new Room("Room4", "kaejnfkjaenf");
+        Room room4 = new Room("Room4", "This is room 4");
 
         Room room5 = new Room("Room5", "Middle Room");
 
@@ -64,26 +64,36 @@ public class Adventure {
         currentRoom = room1;
     }
 
-    public boolean go(String direction, Room currentRoom) {
+    public Room go(String direction) {
+        currentRoom = currentRoom.getRoom(currentRoom);
         if (direction.equalsIgnoreCase("south")) {
-            System.out.println(currentRoom.getSouth());
             if (currentRoom.getSouth() != null) {
-                System.out.println(currentRoom.getSouth());
-                currentRoom.setSouth(currentRoom.getSouth());
-
-               return true;
-            }
-        }return false;
+                currentRoom = currentRoom.getSouth();
+                return currentRoom;
+            }else System.out.println("You cannot go in that direction");
+        }
+        else if (direction.equalsIgnoreCase("north")) {
+            if (currentRoom.getNorth() != null) {
+                currentRoom = currentRoom.getNorth();
+                return currentRoom;
+            }else System.out.println("You cannot go in that direction");
+        }
+        else if (direction.equalsIgnoreCase("east")) {
+            if (currentRoom.getEast() != null) {
+                currentRoom = currentRoom.getEast();
+                return currentRoom;
+            }else System.out.println("You cannot go in that direction");
+        }
+        else if (direction.equalsIgnoreCase("west")) {
+            if (currentRoom.getWest() != null) {
+                currentRoom = currentRoom.getWest();
+                return currentRoom;
+            }else System.out.println("You cannot go in that direction");
+        }return null;
     }
 
 
     public String getRoomDescription(){
         return currentRoom.getRoomDescription();
     }
-
-    /*public void start(){
-        userInterface.acceptInput();
-        //System.out.println(room1.getRoomDescription());
-        //System.out.println(room5.getRoomDescription());
-    }*/
 }

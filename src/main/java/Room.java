@@ -35,25 +35,44 @@ public class Room {
     public Room getSouth(){
         return south;
     }
+    public Room getNorth(){
+        return north;
+    }
+    public Room getEast(){
+        return east;
+    }
+    public Room getWest(){
+        return west;
+    }
     public String getRoomDescription(){
         return roomDescription;
     }
-
-    public boolean moveSouth(){
-        if(south == null){
-            return false;
-        }else return true;
+    public Room getRoom(Room currentRoom){
+        return currentRoom;
     }
-
+    public String getRoomName(){
+        return roomName;
+    }
+    public String getName(){
+        return roomName;
+    }
     @Override
     public String toString() {
+        String northName;
+        String southName;
+        String westName;
+        String eastName;
+        if (north != null) northName = north.getName(); else northName = "null";
+        if (south != null) southName = south.getName(); else southName = "null";
+        if (west != null) westName = west.getName(); else westName = "null";
+        if (east != null) eastName = east.getName(); else eastName = "null";
         return "Room{" +
-                "roomName='" + roomName + '\'' +
-                ", roomDescription='" + roomDescription + '\'' +
-                ", north=" + north +
-                ", south=" + south +
-                ", east=" + east +
-                ", west=" + west +
+                "roomName='" + getRoomName() + '\'' +
+                ", roomDescription='" + getRoomDescription() + '\'' +
+                ", north=" +  northName +
+                ", south=" + southName +
+                ", east=" +  eastName +
+                ", west=" + westName +
                 '}';
     }
 }
