@@ -8,6 +8,7 @@ public class UserInterface {
         this.game = game;
         game.createMap();
     }
+
     public void start() {
         System.out.println(game.getRoomDescription());
         userInput = sc.nextLine();

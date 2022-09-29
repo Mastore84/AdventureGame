@@ -11,19 +11,31 @@ public class Adventure {
                 "The feeling of wanting to escape grows increasingly stronger...");
 
         Room room3 = new Room("Room3", "You arrive in an ancient dungeon jail..\n" +
-                "What meets you is the remains of a giant troll, its skeletons embracing the ancient chains");
+                "What meets you is the remains of a goblin, its skeletons embracing the rusty chains");
 
-        Room room4 = new Room("Room4", "kaejnfkjaenf");
+        Room room4 = new Room("Room4", "What meets you in this room, is an old dining hall, which is centuries past \n" +
+                "its prime. Old majestic dining tables and elegent chairs for ancient nobelty has now desolved to a \n" +
+                "rusty and worn out version of its former glory. While you proceed through the room, you feel you \n" +
+                "sense the souls of its former inhabitants... Maybe they are ghosts, still holding royal feasts to \n" +
+                "this day");
 
-        Room room5 = new Room("Room5", "Middle Room");
+        Room room5 = new Room("Room5", "When you enter you feel");
 
-        Room room6 = new Room("Room6", "");
+        Room room6 = new Room("Room6", "When you enter, the first thing you see is an old majestic bed. You are \n" +
+                "speculating that the inhabitants of these chambers belong to ancient nobelty at some point. \n" +
+                "in other times, you could get a very good nights of sleep here. Today, not so much....");
 
-        Room room7 = new Room("Room7", "");
+        Room room7 = new Room("Room7", "This bedroom doesn't quite seem fancy in any way. Maybe it would be" +
+                "the sleeping chambers of some kind of servant?");
 
-        Room room8 = new Room("Room8", "");
+        Room room8 = new Room("Room8", "It seems like, this room would be some kind of fancy entrance to this " +
+                "establisment. The room is filled with various kinds trophys and armor, the walls decorated with the \n" +
+                " remains of pristine art, the floors are all covered with glass from the giant chandelier which once \n" +
+                "hang in the ceilling. Maybe this room was used to impress important guests and project power to" +
+                "its subjects?");
 
-        Room room9 = new Room("Room9", "");
+        Room room9 = new Room("Room9", "This room seem like an old food chamber. Once this room was used to store" +
+                "locally produced delicacies from this region. Now its only filled with dirt and rats");
 
         //Room 1 connections
         room1.setEast(room2);
@@ -79,11 +91,5 @@ public class Adventure {
 
     public String getRoomDescription(){
         return currentRoom.getRoomDescription();
-    }
-
-    public void start() {
-        /*userInterface.acceptInput();
-        System.out.println(room1.getRoomDescription());
-        System.out.println(room5.getRoomDescription());*/
     }
 }
