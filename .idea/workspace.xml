@@ -4,7 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="ddb6c005-6a8b-41c3-8c0d-408bc07ee4c8" name="Changes" comment="Added descriptions and implemented look function properly." />
+    <list default="true" id="ddb6c005-6a8b-41c3-8c0d-408bc07ee4c8" name="Changes" comment="Added workspace.xml file (re-commit)">
+      <change beforePath="$PROJECT_DIR$/src/main/java/UserInterface.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/UserInterface.java" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -38,7 +40,7 @@
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="8412eb39-467b-4513-8f18-402307c7a2d0" name="Changes" comment="" />
+      <changelist id="ddb6c005-6a8b-41c3-8c0d-408bc07ee4c8" name="Changes" comment="Added descriptions and implemented look function properly." />
       <created>1664184601460</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
@@ -79,7 +81,14 @@
       <option name="project" value="LOCAL" />
       <updated>1664458802680</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="Added workspace.xml file (re-commit)">
+      <created>1664519799211</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1664519799211</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -99,7 +108,8 @@
     <MESSAGE value="After help from Tine" />
     <MESSAGE value="Altered set methods" />
     <MESSAGE value="Added descriptions and implemented look function properly." />
-    <option name="LAST_COMMIT_MESSAGE" value="Added descriptions and implemented look function properly." />
+    <MESSAGE value="Added workspace.xml file (re-commit)" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added workspace.xml file (re-commit)" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
