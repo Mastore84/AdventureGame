@@ -1,4 +1,8 @@
+import java.util.ArrayList;
+
 public class Room {
+
+    private ArrayList<Item> items = new ArrayList<>();
 
     private String roomName;
     private String roomDescription;
@@ -92,7 +96,7 @@ public class Room {
 //metode for at lave og tilføjer items
 
     public void addItem(String description, String name) {
-        this.addItem(new Item(description, name));
+        this.addItem(new Item(description,name));
     }
 
     public Item findItem(String itemName) {
