@@ -2,7 +2,7 @@ public class Item {
 
     private String name;
 
-    public Item(String name) {
+    public Item(String name, String s) {
         this.name = name;
 
     }
