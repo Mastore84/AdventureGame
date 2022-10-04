@@ -76,32 +76,32 @@ public class Adventure {
         currentRoom = room1;
     }
 
-    public Room go(String direction) {
+    public boolean go(String direction) {
         currentRoom = currentRoom.getRoom(currentRoom);
         if (direction.equalsIgnoreCase("south")) {
             if (currentRoom.getSouth() != null) {
                 currentRoom = currentRoom.getSouth();
-                return currentRoom;
-            }else System.out.println("You cannot go in that direction");
+                return true;
+            }else return false;
         }
         else if (direction.equalsIgnoreCase("north")) {
             if (currentRoom.getNorth() != null) {
                 currentRoom = currentRoom.getNorth();
-                return currentRoom;
-            }else System.out.println("You cannot go in that direction");
+                return true;
+            }else return false;
         }
         else if (direction.equalsIgnoreCase("east")) {
             if (currentRoom.getEast() != null) {
                 currentRoom = currentRoom.getEast();
-                return currentRoom;
-            }else System.out.println("You cannot go in that direction");
+                return true;
+            }else return false;
         }
         else if (direction.equalsIgnoreCase("west")) {
             if (currentRoom.getWest() != null) {
                 currentRoom = currentRoom.getWest();
-                return currentRoom;
-            }else System.out.println("You cannot go in that direction");
-        }return null;
+                return true;
+            }else return false;
+        } return false;
     }
 
 

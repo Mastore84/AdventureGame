@@ -4,9 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="ddb6c005-6a8b-41c3-8c0d-408bc07ee4c8" name="Changes" comment="testertest">
-      <change afterPath="$PROJECT_DIR$/src/main/java/Item.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Room.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Room.java" afterDir="false" />
+    <list default="true" id="ddb6c005-6a8b-41c3-8c0d-408bc07ee4c8" name="Changes" comment="Added workspace.xml file (re-commit)">
+      <change beforePath="$PROJECT_DIR$/src/main/java/UserInterface.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/UserInterface.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -32,26 +31,12 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "WebServerToolWindowFactoryState": "false"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;
   }
-}]]></component>
-  <component name="RunManager">
-    <configuration default="true" type="JetRunConfigurationType">
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration default="true" type="KotlinStandaloneScriptRunConfigurationType">
-      <option name="filePath" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-  </component>
+}</component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
@@ -60,7 +45,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1664184601460</updated>
-      <workItem from="1664794631423" duration="933000" />
     </task>
     <task id="LOCAL-00001" summary="Initial commit">
       <created>1664277675615</created>
@@ -104,18 +88,8 @@
       <option name="project" value="LOCAL" />
       <updated>1664519799211</updated>
     </task>
-    <task id="LOCAL-00007" summary="testertest">
-      <created>1664794707848</created>
-      <option name="number" value="00007" />
-      <option name="presentableId" value="LOCAL-00007" />
-      <option name="project" value="LOCAL" />
-      <updated>1664794707848</updated>
-    </task>
-    <option name="localTasksCounter" value="8" />
+    <option name="localTasksCounter" value="7" />
     <servers />
-  </component>
-  <component name="TypeScriptGeneratedFilesManager">
-    <option name="version" value="3" />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
     <option name="TAB_STATES">
@@ -135,8 +109,7 @@
     <MESSAGE value="Altered set methods" />
     <MESSAGE value="Added descriptions and implemented look function properly." />
     <MESSAGE value="Added workspace.xml file (re-commit)" />
-    <MESSAGE value="testertest" />
-    <option name="LAST_COMMIT_MESSAGE" value="testertest" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added workspace.xml file (re-commit)" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
