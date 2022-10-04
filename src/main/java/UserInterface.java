@@ -10,28 +10,35 @@ public class UserInterface {
         game.createMap();
     }
     public void start() {
-        System.out.println("You enter the room.");
+        System.out.println("Welcome to the game! Type help for a list of availible commands\n" +
+                "type look to get a description of your current room\n" +
+                "type exit to exit the game\n" +
+                "you enter the castle");
         while (shouldContinue){
             userInput = sc.nextLine();
-            if (userInput.equals("look")) {
-                System.out.println(game.getRoomDescription());
-            }else if(userInput.equalsIgnoreCase("go south")){
-                game.go("south");
-                System.out.println("You enter the room to the south.");
-            }else if(userInput.equalsIgnoreCase("go north")){
-                game.go("north");
-                System.out.println("You enter the room to the north.");
-            }else if(userInput.equalsIgnoreCase("go east")){
-                game.go("east");
-                System.out.println("You enter the room to the east.");
-            }else if(userInput.equalsIgnoreCase("go west")){
-                game.go("west");
-                System.out.println("You enter the room to the west.");
-            }else if (userInput.equalsIgnoreCase("exit")){
-                System.out.println("Goodbye! Thanks for playing!");
-                shouldContinue = false;
-            }else if (userInput.equalsIgnoreCase("help")){
-                System.out.println("""
+           /*
+           vi tjekker for go-kommando ved først at splitte ved mellemrum, og tjekker at første kommando er go
+           ellers tjekker vi om første input er look, exit eller help.
+            */
+            String[] commandInput = userInput.split(" " );
+            if (commandInput[0].equals("go")){
+               /*
+               vi kører go med go-kommandoens input og hvis den retunerer true, printer vi om hvorvidt du er
+               kommet ind i lokalet eller ej
+                */
+                if(game.go(commandInput[1]))
+                System.out.println("You enter the room to the " + commandInput[1]);
+                else System.out.println("You cannot go that way. Try another way");
+
+            }
+            else {
+                if (userInput.equals("look")) {
+                    System.out.println(game.getRoomDescription());
+                }else if (userInput.equalsIgnoreCase("exit")){
+                    System.out.println("Goodbye! Thanks for playing!");
+                    shouldContinue = false;
+                }else if (userInput.equalsIgnoreCase("help")){
+                    System.out.println("""
                                     Available commands:
                                     
                                     'Go north': Move north of your position.
@@ -46,6 +53,11 @@ public class UserInterface {
             else {
                 System.out.println("Invalid command. Please type 'help' to get a list of available commands.");
             }
+
+            }
+
+
+//s
         }
     }
 }
