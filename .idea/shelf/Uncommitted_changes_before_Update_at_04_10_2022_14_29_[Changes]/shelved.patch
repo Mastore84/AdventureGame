@@ -1,0 +1,179 @@
+Index: src/main/java/Room.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/main/java/Room.java b/src/main/java/Room.java
+--- a/src/main/java/Room.java	
++++ b/src/main/java/Room.java	
+@@ -1,3 +1,5 @@
++import java.util.ArrayList;
++
+ public class Room {
+ 
+     private String roomName;
+@@ -7,6 +9,8 @@
+     private Room east;
+     private Room west;
+ 
++    private ArrayList<Item> item = new ArrayList<>();
++
+     public Room(String roomName, String roomDescription){
+         this.roomName = roomName;
+         this.roomDescription = roomDescription;
+@@ -56,6 +60,7 @@
+     public String getName(){
+         return roomName;
+     }
++
+     @Override
+     public String toString() {
+         String northName;
+Index: src/main/java/Main.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/main/java/Main.java b/src/main/java/Main.java
+--- a/src/main/java/Main.java	
++++ b/src/main/java/Main.java	
+@@ -1,9 +1,8 @@
+ public class Main {
+-
+     public static void main(String[] args) {
+         Adventure game = new Adventure();
+-        game.createMap();
++        Player player = new Player();
+         UserInterface userInterface = new UserInterface(game);
+-        userInterface.start();
++        userInterface.start(player);
+     }
+ }
+Index: src/main/java/Adventure.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/main/java/Adventure.java b/src/main/java/Adventure.java
+--- a/src/main/java/Adventure.java	
++++ b/src/main/java/Adventure.java	
+@@ -1,7 +1,5 @@
+ public class Adventure {
+-
+     private Room currentRoom;
+-
+     public void createMap() {
+         Room room1 = new Room("Room1", "This room is filled with the stench of death and decay.\n" +
+                 "Rats run across the putrid corpses of other failed adventures. Maybe you will join them. Tread carefully.");
+@@ -75,7 +73,7 @@
+ 
+         currentRoom = room1;
+     }
+-
++/*
+     public Room go(String direction) {
+         currentRoom = currentRoom.getRoom(currentRoom);
+         if (direction.equalsIgnoreCase("south")) {
+@@ -107,5 +105,5 @@
+ 
+     public String getRoomDescription(){
+         return currentRoom.getRoomDescription();
+-    }
++    }*/
+ }
+Index: src/main/java/UserInterface.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/main/java/UserInterface.java b/src/main/java/UserInterface.java
+--- a/src/main/java/UserInterface.java	
++++ b/src/main/java/UserInterface.java	
+@@ -4,28 +4,32 @@
+     private Scanner sc = new Scanner(System.in);
+     private String userInput;
+     private Adventure game;
++    private Player player;
++
++
+     private boolean shouldContinue = true;
+     public UserInterface(Adventure game) {
+         this.game = game;
+         game.createMap();
+     }
+-    public void start() {
++    public void start(Player player) {
++        this.player = player;
+         System.out.println("You enter the room.");
+         while (shouldContinue){
+             userInput = sc.nextLine();
+             if (userInput.equals("look")) {
+-                System.out.println(game.getRoomDescription());
++                System.out.println(player.getRoomDescription());
+             }else if(userInput.equalsIgnoreCase("go south")){
+-                game.go("south");
++                player.go("south");
+                 System.out.println("You enter the room to the south.");
+             }else if(userInput.equalsIgnoreCase("go north")){
+-                game.go("north");
++                player.go("north");
+                 System.out.println("You enter the room to the north.");
+             }else if(userInput.equalsIgnoreCase("go east")){
+-                game.go("east");
++                player.go("east");
+                 System.out.println("You enter the room to the east.");
+             }else if(userInput.equalsIgnoreCase("go west")){
+-                game.go("west");
++                player.go("west");
+                 System.out.println("You enter the room to the west.");
+             }else if (userInput.equalsIgnoreCase("exit")){
+                 System.out.println("Goodbye! Thanks for playing!");
+Index: .idea/workspace.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/.idea/workspace.xml b/.idea/workspace.xml
+--- a/.idea/workspace.xml	
++++ b/.idea/workspace.xml	
+@@ -4,7 +4,13 @@
+     <option name="autoReloadType" value="SELECTIVE" />
+   </component>
+   <component name="ChangeListManager">
+-    <list default="true" id="ddb6c005-6a8b-41c3-8c0d-408bc07ee4c8" name="Changes" comment="Added workspace.xml file (re-commit)">
++    <list default="true" id="ddb6c005-6a8b-41c3-8c0d-408bc07ee4c8" name="Changes" comment="Added some extra commands and move descriptions">
++      <change afterPath="$PROJECT_DIR$/src/main/java/Item.java" afterDir="false" />
++      <change afterPath="$PROJECT_DIR$/src/main/java/Player.java" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/src/main/java/Adventure.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Adventure.java" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/src/main/java/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Main.java" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/src/main/java/Room.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Room.java" afterDir="false" />
+       <change beforePath="$PROJECT_DIR$/src/main/java/UserInterface.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/UserInterface.java" afterDir="false" />
+     </list>
+     <option name="SHOW_DIALOG" value="false" />
+@@ -88,7 +94,14 @@
+       <option name="project" value="LOCAL" />
+       <updated>1664519799211</updated>
+     </task>
+-    <option name="localTasksCounter" value="7" />
++    <task id="LOCAL-00007" summary="Added some extra commands and move descriptions">
++      <created>1664520733302</created>
++      <option name="number" value="00007" />
++      <option name="presentableId" value="LOCAL-00007" />
++      <option name="project" value="LOCAL" />
++      <updated>1664520733302</updated>
++    </task>
++    <option name="localTasksCounter" value="8" />
+     <servers />
+   </component>
+   <component name="Vcs.Log.Tabs.Properties">
+@@ -109,7 +122,8 @@
+     <MESSAGE value="Altered set methods" />
+     <MESSAGE value="Added descriptions and implemented look function properly." />
+     <MESSAGE value="Added workspace.xml file (re-commit)" />
+-    <option name="LAST_COMMIT_MESSAGE" value="Added workspace.xml file (re-commit)" />
++    <MESSAGE value="Added some extra commands and move descriptions" />
++    <option name="LAST_COMMIT_MESSAGE" value="Added some extra commands and move descriptions" />
+   </component>
+   <component name="XDebuggerManager">
+     <breakpoint-manager>
