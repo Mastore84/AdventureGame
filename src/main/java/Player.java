@@ -42,7 +42,6 @@ public class Player {
         if(inventory.isEmpty()){
             return null;
         }else {
-            System.out.println(inventory);
             return inventory;
         }
     }

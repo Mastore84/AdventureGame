@@ -65,7 +65,8 @@ public class UserInterface {
                             """);
                 } else if (userInput.equalsIgnoreCase(("inventory"))) {
                     if(player.getInventory() != null) {
-                        player.getInventory();
+                        System.out.println("Your inventory consist of the following items:");
+                        System.out.println(player.getInventory());
                     }else System.out.println("Your inventory is empty.");
                 } else if (userInput.equalsIgnoreCase("drop")) {
 

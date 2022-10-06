@@ -4,13 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="ddb6c005-6a8b-41c3-8c0d-408bc07ee4c8" name="Changes" comment="change Room class slightly to make each Room object also create an ArrayList">
+    <list default="true" id="ddb6c005-6a8b-41c3-8c0d-408bc07ee4c8" name="Changes" comment="added some flavour text to startup, &#10;added getInventory/takeItem/dropItem methods in Player class, &#10;added String description to Item constructor,&#10;expanded 'inventory' userInput behaviour in UserInterface(not working properly yet),&#10;added TODO menu options">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Item.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Item.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/Player.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Player.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/UserInterface.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/UserInterface.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/Player.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Player.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/Room.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Room.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -121,7 +117,28 @@
       <option name="project" value="LOCAL" />
       <updated>1665060675077</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="added some flavour text to startup, &#10;added getInventory/takeItem/dropItem methods in Player class, &#10;added String description to Item constructor,&#10;expanded 'inventory' userInput behaviour in UserInterface(not working properly yet)">
+      <created>1665082557331</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1665082557331</updated>
+    </task>
+    <task id="LOCAL-00012" summary="added some flavour text to startup, &#10;added getInventory/takeItem/dropItem methods in Player class, &#10;added String description to Item constructor,&#10;expanded 'inventory' userInput behaviour in UserInterface(not working properly yet),&#10;added TODO menu options">
+      <created>1665082643315</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1665082643315</updated>
+    </task>
+    <task id="LOCAL-00013" summary="added some flavour text to startup, &#10;added getInventory/takeItem/dropItem methods in Player class, &#10;added String description to Item constructor,&#10;expanded 'inventory' userInput behaviour in UserInterface(not working properly yet),&#10;added TODO menu options">
+      <created>1665082683860</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1665082683860</updated>
+    </task>
+    <option name="localTasksCounter" value="14" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -146,10 +163,24 @@
     <MESSAGE value="got moving between rooms and look to work (I hope)" />
     <MESSAGE value="removed unneccessary comments and unused methods" />
     <MESSAGE value="change Room class slightly to make each Room object also create an ArrayList" />
-    <option name="LAST_COMMIT_MESSAGE" value="change Room class slightly to make each Room object also create an ArrayList" />
+    <MESSAGE value="added some flavour text to startup, &#10;added getInventory/takeItem/dropItem methods in Player class, &#10;added String description to Item constructor,&#10;expanded 'inventory' userInput behaviour in UserInterface(not working properly yet)" />
+    <MESSAGE value="added some flavour text to startup, &#10;added getInventory/takeItem/dropItem methods in Player class, &#10;added String description to Item constructor,&#10;expanded 'inventory' userInput behaviour in UserInterface(not working properly yet),&#10;added TODO menu options" />
+    <option name="LAST_COMMIT_MESSAGE" value="added some flavour text to startup, &#10;added getInventory/takeItem/dropItem methods in Player class, &#10;added String description to Item constructor,&#10;expanded 'inventory' userInput behaviour in UserInterface(not working properly yet),&#10;added TODO menu options" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/UserInterface.java</url>
+          <line>66</line>
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/UserInterface.java</url>
+          <line>67</line>
+          <option name="timeStamp" value="2" />
+        </line-breakpoint>
+      </breakpoints>
       <default-breakpoints>
         <breakpoint enabled="true" type="java-exception" />
       </default-breakpoints>
