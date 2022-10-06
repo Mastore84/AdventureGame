@@ -4,7 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="ddb6c005-6a8b-41c3-8c0d-408bc07ee4c8" name="Changes" comment="implemented methods to pick up and drop items, and show current inventory properly" />
+    <list default="true" id="ddb6c005-6a8b-41c3-8c0d-408bc07ee4c8" name="Changes" comment="Merge remote-tracking branch 'origin/master'&#10;&#10;# Conflicts:&#10;#&#9;.idea/workspace.xml">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Player.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Player.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/UserInterface.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/UserInterface.java" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -149,7 +153,21 @@
       <option name="project" value="LOCAL" />
       <updated>1665091878399</updated>
     </task>
-    <option name="localTasksCounter" value="16" />
+    <task id="LOCAL-00016" summary="implemented methods to pick up and drop items, and show current inventory properly,&#10;added additional comments to methods,&#10;fixed some spelling errors in room descriptions">
+      <created>1665092339154</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1665092339154</updated>
+    </task>
+    <task id="LOCAL-00017" summary="Merge remote-tracking branch 'origin/master'&#10;&#10;# Conflicts:&#10;#&#9;.idea/workspace.xml">
+      <created>1665092385930</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1665092385930</updated>
+    </task>
+    <option name="localTasksCounter" value="18" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -178,7 +196,9 @@
     <MESSAGE value="added some flavour text to startup, &#10;added getInventory/takeItem/dropItem methods in Player class, &#10;added String description to Item constructor,&#10;expanded 'inventory' userInput behaviour in UserInterface(not working properly yet),&#10;added TODO menu options" />
     <MESSAGE value="fixed getInventory action" />
     <MESSAGE value="implemented methods to pick up and drop items, and show current inventory properly" />
-    <option name="LAST_COMMIT_MESSAGE" value="implemented methods to pick up and drop items, and show current inventory properly" />
+    <MESSAGE value="implemented methods to pick up and drop items, and show current inventory properly,&#10;added additional comments to methods,&#10;fixed some spelling errors in room descriptions" />
+    <MESSAGE value="Merge remote-tracking branch 'origin/master'&#10;&#10;# Conflicts:&#10;#&#9;.idea/workspace.xml" />
+    <option name="LAST_COMMIT_MESSAGE" value="Merge remote-tracking branch 'origin/master'&#10;&#10;# Conflicts:&#10;#&#9;.idea/workspace.xml" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

@@ -2,12 +2,32 @@ import java.util.ArrayList;
 
 public class Player {
     private Room currentRoom;
+    int hp;
     private ArrayList<Item> inventory;
 
     public Player() {
-        int hp = 100;
+        this.hp = 100;
         inventory = new ArrayList<>();
 
+    }
+    public void getHealth(){
+        if(hp == 100){
+            System.out.println("Health: " + hp + " - you are in perfect health.");
+        }
+        else if (hp < 100 && hp > 74){
+            System.out.println("Health: " + hp + " - you are in good health, but you would do well to avoid fighting right now.");
+        }
+        else if (hp < 75 && hp > 24){
+            System.out.println("Health: " + hp + " - you are in poor health, and should avoid fighting at any cost.");
+        }
+        else if (hp < 25 && hp > 9){
+            System.out.println("Health: " + hp + " - you are in extremely poor health, and should find a way to heal yourself\n" +
+                    "as soon as possible!");
+        }
+        else if(hp < 10 && hp > 0){
+            System.out.println("Health: " + hp + " - you are close to death and are in immediate need of healing!");
+        }
+        else System.out.println("You don't have any health.");
     }
     //movement related methods
     public boolean go(String direction) {

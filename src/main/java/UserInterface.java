@@ -87,6 +87,11 @@ public class UserInterface {
                                                             
                         """);
             }
+            //health command
+            else if (userInput.equalsIgnoreCase("health")){
+                player.getHealth();
+            }
+
             //inventory command
             else if (userInput.equalsIgnoreCase(("inventory"))) {
                 if (player.getInventory() != null) {
