@@ -3,37 +3,39 @@ public class Map {
     public void createMap() {
         Room room1 = new Room("Room1", "This room is filled with the stench of death and decay.\n" +
                 "Rats run across the putrid corpses of other failed adventures. Maybe you will join them. Tread carefully.");
+        room1.addItem("lamp", "a shiny brass lamp");
+        room1.addItem("sword", "a shiny steel sword");
 
         Room room2 = new Room("Room2", "The room appears very dark and desolate. The \n" +
                 "freezing temperature chills you to the bone, almost numbing you in the process.\n" +
                 "The feeling of wanting to escape grows increasingly stronger...");
 
         Room room3 = new Room("Room3", "You arrive in an ancient dungeon jail..\n" +
-                "What meets you is the remains of a goblin, its skeletons embracing the rusty chains");
+                "What meets you is the remains of a goblin, its skeleton embracing the rusty chains");
 
         Room room4 = new Room("Room4", "What meets you in this room, is an old dining hall, which is centuries past \n" +
-                "its prime. Old majestic dining tables and elegent chairs for ancient nobelty has now desolved to a \n" +
-                "rusty and worn out version of its former glory. While you proceed through the room, you feel you \n" +
-                "sense the souls of its former inhabitants... Maybe they are ghosts, still holding royal feasts to \n" +
+                "its prime. Old majestic dining tables and elegant chairs for ancient nobility have now disolved to a \n" +
+                "rusty and worn out version of its former glory. While you proceed through the room, you feel like you \n" +
+                "can sense the souls of its former inhabitants... Maybe they are ghosts, still holding royal feasts to \n" +
                 "this day");
 
         Room room5 = new Room("Room5", "When you enter you feel");
 
         Room room6 = new Room("Room6", "When you enter, the first thing you see is an old majestic bed. You are \n" +
-                "speculating that the inhabitants of these chambers belong to ancient nobelty at some point. \n" +
-                "in other times, you could get a very good nights of sleep here. Today, not so much....");
+                "speculating that the inhabitants of these chambers belonged to ancient nobility at some point. \n" +
+                "At other times, you could get a very good nights of sleep here. Today, not so much....");
 
         Room room7 = new Room("Room7", "This bedroom doesn't quite seem fancy in any way. Maybe it would be" +
                 "the sleeping chambers of some kind of servant?");
 
-        Room room8 = new Room("Room8", "It seems like, this room would be some kind of fancy entrance to this " +
-                "establisment. The room is filled with various kinds trophys and armor, the walls decorated with the \n" +
-                " remains of pristine art, the floors are all covered with glass from the giant chandelier which once \n" +
-                "hang in the ceilling. Maybe this room was used to impress important guests and project power to" +
+        Room room8 = new Room("Room8", "It seems like this room would be some kind of fancy entrance to this " +
+                "establishment. The room is filled with various kinds of trophies and armour, the walls decorated with the \n" +
+                "remains of pristine art, the floors are all covered with glass from the giant chandelier which once \n" +
+                "hung from the ceiling. Maybe this room was used to impress important guests and project power to" +
                 "its subjects?");
 
-        Room room9 = new Room("Room9", "This room seem like an old food chamber. Once this room was used to store" +
-                "locally produced delicacies from this region. Now its only filled with dirt and rats");
+        Room room9 = new Room("Room9", "This room seems like an old food chamber. Once this room was used to store" +
+                "locally produced delicacies from this region. Now it's only filled with dirt and rats scurrying across the floor.");
 
         //Room 1 connections
         room1.setEast(room2);

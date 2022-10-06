@@ -4,10 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="ddb6c005-6a8b-41c3-8c0d-408bc07ee4c8" name="Changes" comment="added some flavour text to startup, &#10;added getInventory/takeItem/dropItem methods in Player class, &#10;added String description to Item constructor,&#10;expanded 'inventory' userInput behaviour in UserInterface(not working properly yet),&#10;added TODO menu options">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Player.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Player.java" afterDir="false" />
-    </list>
+    <list default="true" id="ddb6c005-6a8b-41c3-8c0d-408bc07ee4c8" name="Changes" comment="implemented methods to pick up and drop items, and show current inventory properly" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -138,7 +135,21 @@
       <option name="project" value="LOCAL" />
       <updated>1665082683860</updated>
     </task>
-    <option name="localTasksCounter" value="14" />
+    <task id="LOCAL-00014" summary="fixed getInventory action">
+      <created>1665083281425</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1665083281425</updated>
+    </task>
+    <task id="LOCAL-00015" summary="implemented methods to pick up and drop items, and show current inventory properly">
+      <created>1665091878399</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1665091878399</updated>
+    </task>
+    <option name="localTasksCounter" value="16" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -165,22 +176,12 @@
     <MESSAGE value="change Room class slightly to make each Room object also create an ArrayList" />
     <MESSAGE value="added some flavour text to startup, &#10;added getInventory/takeItem/dropItem methods in Player class, &#10;added String description to Item constructor,&#10;expanded 'inventory' userInput behaviour in UserInterface(not working properly yet)" />
     <MESSAGE value="added some flavour text to startup, &#10;added getInventory/takeItem/dropItem methods in Player class, &#10;added String description to Item constructor,&#10;expanded 'inventory' userInput behaviour in UserInterface(not working properly yet),&#10;added TODO menu options" />
-    <option name="LAST_COMMIT_MESSAGE" value="added some flavour text to startup, &#10;added getInventory/takeItem/dropItem methods in Player class, &#10;added String description to Item constructor,&#10;expanded 'inventory' userInput behaviour in UserInterface(not working properly yet),&#10;added TODO menu options" />
+    <MESSAGE value="fixed getInventory action" />
+    <MESSAGE value="implemented methods to pick up and drop items, and show current inventory properly" />
+    <option name="LAST_COMMIT_MESSAGE" value="implemented methods to pick up and drop items, and show current inventory properly" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/UserInterface.java</url>
-          <line>66</line>
-          <option name="timeStamp" value="1" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/UserInterface.java</url>
-          <line>67</line>
-          <option name="timeStamp" value="2" />
-        </line-breakpoint>
-      </breakpoints>
       <default-breakpoints>
         <breakpoint enabled="true" type="java-exception" />
       </default-breakpoints>
