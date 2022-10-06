@@ -56,11 +56,7 @@ public class UserInterface {
                 } else {
                     System.out.println("Invalid command. Please type 'help' to get a list of available commands.");
                 }
-
             }
-
-
-//s
         }
     }
 }

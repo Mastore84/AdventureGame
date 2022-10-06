@@ -4,21 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="ddb6c005-6a8b-41c3-8c0d-408bc07ee4c8" name="Changes" comment="Added Map class">
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_27-09-2022_14_58_[Changes]/shelved.patch" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_27-09-2022_14_58__Changes_.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Adventure.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Adventure.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Map.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Map.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Player.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Player.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Room.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Room.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/UserInterface.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/UserInterface.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/Adventure.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Adventure.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Main.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/Player.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Player.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/UserInterface.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/UserInterface.class" afterDir="false" />
-    </list>
+    <list default="true" id="ddb6c005-6a8b-41c3-8c0d-408bc07ee4c8" name="Changes" comment="got moving between rooms and look to work (I hope)" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -108,7 +94,14 @@
       <option name="project" value="LOCAL" />
       <updated>1665057153828</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="got moving between rooms and look to work (I hope)">
+      <created>1665059270438</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1665059270438</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -130,7 +123,8 @@
     <MESSAGE value="Added descriptions and implemented look function properly." />
     <MESSAGE value="Added workspace.xml file (re-commit)" />
     <MESSAGE value="Added Map class" />
-    <option name="LAST_COMMIT_MESSAGE" value="Added Map class" />
+    <MESSAGE value="got moving between rooms and look to work (I hope)" />
+    <option name="LAST_COMMIT_MESSAGE" value="got moving between rooms and look to work (I hope)" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
