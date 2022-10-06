@@ -1,9 +1,9 @@
 public class Food extends Item{
 
-    boolean edible;
+    int healthPoints;
 
-    public Food(String name, String description, boolean edible) {
+    public Food(String name, String description, int healthPoints) {
         super(name, description);
-        this.edible = edible;
+        this.healthPoints = healthPoints;
     }
 }
