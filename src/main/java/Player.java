@@ -2,9 +2,14 @@ import java.util.ArrayList;
 
 public class Player {
     private Room currentRoom;
-    private int hp;
-    private ArrayList<Item> inventory = new ArrayList<>();
+    private ArrayList inventory;
 
+    public Player() {
+        int hp = 100;
+        inventory = new ArrayList<Item>();
+        Item i = new Item("lamp", "a shiny brass lamp");
+        inventory.add(i);
+    }
     public boolean go(String direction) {
         currentRoom = currentRoom.getRoom(currentRoom);
         if (direction.equalsIgnoreCase("south")) {
@@ -33,6 +38,20 @@ public class Player {
         } return false;
     }
 
+    public ArrayList<Item> getInventory() {
+        if(inventory.isEmpty()){
+            return null;
+        }else {
+            System.out.println(inventory);
+            return inventory;
+        }
+    }
+    public void takeItem(Item item){
+        inventory.add(item);
+    }
+    public void dropItem(Item item){
+        inventory.remove(item);
+    }
     public String getRoomDescription(){
         return currentRoom.getRoomDescription();
     }
