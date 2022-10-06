@@ -2,14 +2,14 @@ import java.util.ArrayList;
 
 public class Player {
     private Room currentRoom;
-    private ArrayList inventory;
+    private ArrayList<Item> inventory;
 
     public Player() {
         int hp = 100;
-        inventory = new ArrayList<Item>();
-        Item i = new Item("lamp", "a shiny brass lamp");
-        inventory.add(i);
+        inventory = new ArrayList<>();
+
     }
+    //movement related methods
     public boolean go(String direction) {
         currentRoom = currentRoom.getRoom(currentRoom);
         if (direction.equalsIgnoreCase("south")) {
@@ -37,7 +37,7 @@ public class Player {
             }else return false;
         } return false;
     }
-
+    //item and inventory related methods
     public ArrayList<Item> getInventory() {
         if(inventory.isEmpty()){
             return null;
@@ -45,17 +45,44 @@ public class Player {
             return inventory;
         }
     }
-    public void takeItem(Item item){
-        inventory.add(item);
+    public boolean takeItem(Item item){
+        if(currentRoom.getItemList().contains(item)){
+            System.out.println("You take the " + item.getName() + ".");
+            inventory.add(item);
+            currentRoom.removeItem(item);
+            return true;
+        }
+        else return false;
     }
-    public void dropItem(Item item){
-        inventory.remove(item);
+    public boolean dropItem(Item item){
+        if(inventory.contains(item)) {
+            System.out.println("You drop the " + item.getName() + ".");
+            inventory.remove(item);
+            currentRoom.addItem(item.getName(), item.getDescription());
+            return true;
+        }
+        else return false;
     }
+
+    public Item findItem(String itemName) {
+        for (Item item : inventory) {
+            if (item.getName().equalsIgnoreCase(itemName)) {
+                return item;
+            }
+        }
+        return null;
+    }
+    //room related methods
     public String getRoomDescription(){
         return currentRoom.getRoomDescription();
     }
+
     public void setInitialRoom(Room currentRoom){
         this.currentRoom = currentRoom;
+    }
+
+    public Room getCurrentRoom(){
+        return currentRoom;
     }
 }
 

@@ -10,7 +10,6 @@ public class UserInterface {
     public UserInterface(Adventure game) {
         sc = new Scanner(System.in);
         this.game = game;
-
     }
 
     public void start() {
@@ -30,7 +29,7 @@ public class UserInterface {
            ellers tjekker vi om første input er look, exit eller help.
             */
             String[] commandInput = userInput.split(" ");
-            if (commandInput[0].equals("go")) {
+            if (commandInput[0].equalsIgnoreCase("go")) {
                /*
                vi kører go med go-kommandoens input og hvis den retunerer true, printer vi om hvorvidt du er
                kommet ind i lokalet eller ej
@@ -39,40 +38,66 @@ public class UserInterface {
                     System.out.println("You enter the room to the " + commandInput[1]);
                 else System.out.println("You cannot go that way. Try another way");
 
-            } else {
-                if (userInput.equals("look")) {
-                    System.out.println(player.getRoomDescription());
-                } else if (userInput.equalsIgnoreCase("exit")) {
-                    System.out.println("Goodbye! Thanks for playing!");
-                    shouldContinue = false;
-                } else if (userInput.equalsIgnoreCase("help")) {
-                    System.out.println("""
-                            Available commands:
-                                                                
-                            'go north': Move north of your position.
-                            'go south': Move south of your position.
-                            'go east': Move east of your position.
-                            'go west': Move west of your position.
-                            'look': Look around the current room.
-                            'inventory' : Display your current inventory.
-                            'take' followed by an item name: Pick up a desired item. TODO
-                            'drop': Choose an item from your inventory to drop. TODO
-                            'health': Check your current health status. TODO
-                            'eat': Eat a food item from your inventory. TODO
-                            'help': Display this help screen.
-                            'exit': Exits the game.
-                                                                
-                            """);
-                } else if (userInput.equalsIgnoreCase(("inventory"))) {
-                    if(player.getInventory() != null) {
-                        System.out.println("Your inventory consist of the following items:");
-                        System.out.println(player.getInventory());
-                    }else System.out.println("Your inventory is empty.");
-                } else if (userInput.equalsIgnoreCase("drop")) {
-
+            }
+            //take command
+            else if (commandInput[0].equalsIgnoreCase("take") || commandInput[0].equalsIgnoreCase("get")) {
+                if (player.takeItem(player.getCurrentRoom().findItem(commandInput[1]))) {
+                    player.takeItem(player.getCurrentRoom().findItem(commandInput[1]));
                 } else {
-                    System.out.println("Invalid command. Please type 'help' to get a list of available commands.");
+                    System.out.println("There is nothing like a(n) " + commandInput[1] + " to take around here.");
                 }
+            }
+            //drop command
+            else if (commandInput[0].equalsIgnoreCase("drop")) {
+                if (player.dropItem(player.findItem(commandInput[1]))){
+                    player.dropItem(player.findItem(commandInput[1]));
+                } else System.out.println("You do not have a(n) " + commandInput[1] + " in your inventory.");
+            }
+            //look command
+            else if (userInput.equals("look")) {
+                if (!player.getCurrentRoom().getItemList().isEmpty()) {
+                    System.out.println(player.getRoomDescription());
+                    System.out.println("You see the following item(s):");
+                    player.getCurrentRoom().displayItems();
+                } else System.out.println(player.getRoomDescription());
+
+            }
+            //exit command
+            else if (userInput.equalsIgnoreCase("exit")) {
+                System.out.println("Goodbye! Thanks for playing!");
+                shouldContinue = false;
+            }
+            //help command
+            else if (userInput.equalsIgnoreCase("help")) {
+                System.out.println("""
+                        Available commands:
+                                                            
+                        'go north': Move north of your position.
+                        'go south': Move south of your position.
+                        'go east': Move east of your position.
+                        'go west': Move west of your position.
+                        'look': Look around the current room.
+                        'inventory' : Display your current inventory.
+                        'take' followed by an item name: Pick up a desired item.
+                        'drop': Choose an item from your inventory to drop.
+                        'health': Check your current health status. TODO
+                        'eat': Eat a food item from your inventory. TODO
+                        'help': Display this help screen.
+                        'exit': Exits the game.
+                                                            
+                        """);
+            }
+            //inventory command
+            else if (userInput.equalsIgnoreCase(("inventory"))) {
+                if (player.getInventory() != null) {
+                    System.out.println("Your inventory consists of the following item(s):");
+                    for (Item item : player.getInventory()) {
+                        System.out.println(item.getName() + ",");
+                    }
+                } else System.out.println("Your inventory is empty.");
+            }
+            else {
+                System.out.println("Invalid command. Please type 'help' to get a list of available commands.");
             }
         }
     }

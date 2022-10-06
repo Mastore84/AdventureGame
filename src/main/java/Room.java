@@ -104,7 +104,6 @@ public class Room {
         for (Item item : items) {
             if (item.getName().equalsIgnoreCase(itemName)) {
                 return item;
-
             }
         }
         return null;
@@ -113,5 +112,14 @@ public class Room {
     public void removeItem(Item item) {
         items.remove(item);
     }
-
+    public ArrayList<Item> getItemList(){
+        return items;
+    }
+    //display items in a room when using the 'look' command
+    public void displayItems(){
+        for (Item item : items) {
+            System.out.print(item.getDescription());
+            System.out.println(", ");
+        }
+    }
 }

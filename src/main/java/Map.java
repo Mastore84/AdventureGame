@@ -3,6 +3,8 @@ public class Map {
     public void createMap() {
         Room room1 = new Room("Room1", "This room is filled with the stench of death and decay.\n" +
                 "Rats run across the putrid corpses of other failed adventures. Maybe you will join them. Tread carefully.");
+        room1.addItem("lamp", "a shiny brass lamp");
+        room1.addItem("sword", "a shiny steel sword");
 
         Room room2 = new Room("Room2", "The room appears very dark and desolate. The \n" +
                 "freezing temperature chills you to the bone, almost numbing you in the process.\n" +
