@@ -2,7 +2,7 @@ import java.util.ArrayList;
 
 public class Room {
 
-    private ArrayList<Item> items = new ArrayList<>();
+    private ArrayList<Item> items;
 
     private String roomName;
     private String roomDescription;
@@ -18,6 +18,7 @@ public class Room {
         south = null;
         east = null;
         west = null;
+        this.items = new ArrayList<>();
     }
 
     public void setNorth(Room room) {
@@ -112,4 +113,5 @@ public class Room {
     public void removeItem(Item item) {
         items.remove(item);
     }
+
 }

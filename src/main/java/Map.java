@@ -73,6 +73,7 @@ public class Map {
 
         //sets initial
         initialRoom = room1;
+
     }
 
     public Room getInitialRoom(){
