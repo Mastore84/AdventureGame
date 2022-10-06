@@ -1,6 +1,17 @@
 public class Adventure {
+    private Player player;
 
-    private Room currentRoom;
+    public Adventure() {
+        Player player = new Player();
+        Map map = new Map();
+        map.createMap();
+        player.setInitialRoom(map.getInitialRoom());
+        this.player = player;
+    }
+    public Player getPlayer(){
+        return player;
+    }
+   /* private Room currentRoom;
 
     public void createMap() {
         Room room1 = new Room("Room1", "This room is filled with the stench of death and decay.\n" +
@@ -107,5 +118,5 @@ public class Adventure {
 
     public String getRoomDescription(){
         return currentRoom.getRoomDescription();
-    }
+    }*/
 }

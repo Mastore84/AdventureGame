@@ -93,7 +93,7 @@ public class Room {
     }
 
 
-//metode for at lave og tilføjer items
+//metode for at lave og tilføje items
 
     public void addItem(String description, String name) {
         this.items.add(new Item(description,name));
