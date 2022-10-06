@@ -18,8 +18,12 @@ public class UserInterface {
         System.out.println("Welcome to the game! Type 'help' for a list of available commands\n" +
                 "type 'look' to get a description of your current room\n" +
                 "type 'exit' to exit the game\n" +
-                "You enter the castle.");
+                "\nYou enter the castle. As you enter, the door shuts behind you. In vain, you attempt to open the door,\n" +
+                "only to discover that it has been locked up tight. You are trapped! Your only means of escape is to\n" +
+                "search the castle for a way out.\n" +
+                "Good luck hero!\n");
         while (shouldContinue) {
+            System.out.println("Type command: ");
             userInput = sc.nextLine();
            /*
            vi tjekker for go-kommando ved først at splitte ved mellemrum, og tjekker at første kommando er go
@@ -45,14 +49,26 @@ public class UserInterface {
                     System.out.println("""
                             Available commands:
                                                                 
-                            'Go north': Move north of your position.
-                            'Go south': Move south of your position.
-                            'Go east': Move east of your position.
-                            'Go west': Move west of your position.
+                            'go north': Move north of your position.
+                            'go south': Move south of your position.
+                            'go east': Move east of your position.
+                            'go west': Move west of your position.
+                            'look': Look around the current room.
+                            'inventory' : Display your current inventory.
+                            'take' followed by an item name: Pick up a desired item. TODO
+                            'drop': Choose an item from your inventory to drop. TODO
+                            'health': Check your current health status. TODO
+                            'eat': Eat a food item from your inventory. TODO
                             'help': Display this help screen.
                             'exit': Exits the game.
                                                                 
                             """);
+                } else if (userInput.equalsIgnoreCase(("inventory"))) {
+                    if(player.getInventory() != null) {
+                        player.getInventory();
+                    }else System.out.println("Your inventory is empty.");
+                } else if (userInput.equalsIgnoreCase("drop")) {
+
                 } else {
                     System.out.println("Invalid command. Please type 'help' to get a list of available commands.");
                 }
