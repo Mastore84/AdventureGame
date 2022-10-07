@@ -2,10 +2,11 @@ public class Item {
 
     private String name;
     private String description;
-
-    public Item(String name, String description) {
+    private boolean isEdible;
+    public Item(String name, String description, boolean isEdible) {
         this.name = name;
         this.description = description;
+        this.isEdible = isEdible;
     }
     public String getName() {
         return name;
@@ -15,6 +16,9 @@ public class Item {
     }
     public Item(Item item) {
         this.name = item.name;
+    }
+    public boolean isEdible(){
+        return isEdible;
     }
 
     public String toString() {

@@ -10,24 +10,8 @@ public class Player {
         inventory = new ArrayList<>();
 
     }
-    public void getHealth(){
-        if(hp == 100){
-            System.out.println("Health: " + hp + " - you are in perfect health.");
-        }
-        else if (hp < 100 && hp > 74){
-            System.out.println("Health: " + hp + " - you are in good health, but you would do well to avoid fighting right now.");
-        }
-        else if (hp < 75 && hp > 24){
-            System.out.println("Health: " + hp + " - you are in poor health, and should avoid fighting at any cost.");
-        }
-        else if (hp < 25 && hp > 9){
-            System.out.println("Health: " + hp + " - you are in extremely poor health, and should find a way to heal yourself\n" +
-                    "as soon as possible!");
-        }
-        else if(hp < 10 && hp > 0){
-            System.out.println("Health: " + hp + " - you are close to death and are in immediate need of healing!");
-        }
-        else System.out.println("You don't have any health.");
+    public int getHealth(){
+        return hp;
     }
     //movement related methods
     public boolean go(String direction) {
@@ -78,7 +62,7 @@ public class Player {
         if(inventory.contains(item)) {
             System.out.println("You drop the " + item.getName() + ".");
             inventory.remove(item);
-            currentRoom.addItem(item.getName(), item.getDescription());
+            currentRoom.addItem(item.getName(), item.getDescription(), item.isEdible());
             return true;
         }
         else return false;
@@ -92,6 +76,7 @@ public class Player {
         }
         return null;
     }
+
     //room related methods
     public String getRoomDescription(){
         return currentRoom.getRoomDescription();
@@ -103,6 +88,24 @@ public class Player {
 
     public Room getCurrentRoom(){
         return currentRoom;
+    }
+
+    public void eat(String foodName){
+        for (Item item : inventory){
+            if(item instanceof Food) {
+                if(foodName.equalsIgnoreCase(item.getName())) {
+                    Food selectedFood = (Food) item;
+                    System.out.println("You eat the " + selectedFood.getName());
+                    hp = hp + selectedFood.healthPoints;
+                    if(selectedFood.healthPoints < 0){
+                        System.out.println("The " + selectedFood + " is poisonous! You lose " + selectedFood.healthPoints + " health points!");
+                    }
+                    else {
+                        System.out.println("The " + selectedFood + " heals you for " + selectedFood.healthPoints + " health points!");
+                    }
+                }
+            }
+        }
     }
 }
 

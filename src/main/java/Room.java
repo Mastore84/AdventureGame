@@ -96,8 +96,11 @@ public class Room {
 
 //metode for at lave og tilføje items
 
-    public void addItem(String description, String name) {
-        this.items.add(new Item(description,name));
+    public void addItem(String description, String name, boolean isEdible) {
+        this.items.add(new Item(description, name, isEdible));
+    }
+    public void addFood(String description, String name, int healthPoints, boolean edible){
+        this.items.add(new Food(description, name, healthPoints, edible));
     }
 
     public Item findItem(String itemName) {
