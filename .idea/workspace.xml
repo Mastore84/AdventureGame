@@ -4,20 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="ddb6c005-6a8b-41c3-8c0d-408bc07ee4c8" name="Changes" comment="Added Weapon class,&#10;added MeleeWeapon and RangedWeapon subclasses, &#10;added add methods for melee and ranged weapons">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Food.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Food.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Item.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Item.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Map.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Map.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/MeleeWeapon.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/MeleeWeapon.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Player.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Player.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/RangedWeapon.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/RangedWeapon.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Room.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Room.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/UserInterface.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/UserInterface.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Weapon.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Weapon.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/Item.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Item.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/Room.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Room.class" afterDir="false" />
-    </list>
+    <list default="true" id="ddb6c005-6a8b-41c3-8c0d-408bc07ee4c8" name="Changes" comment="Changed constructors for items,&#10;fixed some bugs relating to dropped items losing their properties as food, weapons, etc." />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -211,7 +198,14 @@
       <option name="project" value="LOCAL" />
       <updated>1665220268859</updated>
     </task>
-    <option name="localTasksCounter" value="23" />
+    <task id="LOCAL-00023" summary="Changed constructors for items,&#10;fixed some bugs relating to dropped items losing their properties as food, weapons, etc.">
+      <created>1665228685978</created>
+      <option name="number" value="00023" />
+      <option name="presentableId" value="LOCAL-00023" />
+      <option name="project" value="LOCAL" />
+      <updated>1665228685978</updated>
+    </task>
+    <option name="localTasksCounter" value="24" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -247,7 +241,8 @@
     <MESSAGE value="changed Food constructor slightly" />
     <MESSAGE value="added eat method in Player class,&#10;expanded Food class,&#10;added 'eat' command to UserInterface,&#10;minor changes/corrections to UserInterface" />
     <MESSAGE value="Added Weapon class,&#10;added MeleeWeapon and RangedWeapon subclasses, &#10;added add methods for melee and ranged weapons" />
-    <option name="LAST_COMMIT_MESSAGE" value="Added Weapon class,&#10;added MeleeWeapon and RangedWeapon subclasses, &#10;added add methods for melee and ranged weapons" />
+    <MESSAGE value="Changed constructors for items,&#10;fixed some bugs relating to dropped items losing their properties as food, weapons, etc." />
+    <option name="LAST_COMMIT_MESSAGE" value="Changed constructors for items,&#10;fixed some bugs relating to dropped items losing their properties as food, weapons, etc." />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
