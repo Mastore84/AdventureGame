@@ -1,18 +1,17 @@
 public class Weapon extends Item{
-
-    private boolean isRanged;
     private int damage;
     private int remainingAmmo;
 
-    public Weapon(String name, String description, boolean isEdible, boolean isRanged, int damage, int remainingAmmo){
-        super(name, description, isEdible);
-        this.isRanged = isRanged;
+    public Weapon(String name, String description, boolean isEdible, boolean isEquippable, int damage){
+        super(name, description, isEdible, isEquippable);
         this.damage = damage;
-        this.remainingAmmo = remainingAmmo;
     }
 
-    public int remainingUses(){
+    public int getRemainingAmmo(){
         return remainingAmmo;
+    }
+    public int getDamage(){
+        return damage;
     }
 
 }

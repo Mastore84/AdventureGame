@@ -96,19 +96,19 @@ public class Room {
 
 //metode for at lave og tilføje items
 
-    public void addItem(String description, String name, boolean isEdible) {
-        this.items.add(new Item(description, name, isEdible));
+    public void addItem(String name, String description,boolean isEdible, boolean isEquippable) {
+        this.items.add(new Item(name, description, isEdible, isEquippable));
     }
-    public void addFood(String description, String name,  boolean isEdible, int healthPoints){
-        this.items.add(new Food(description, name, isEdible, healthPoints));
-    }
-
-    public void addRangedWeapon(String description, String name,  boolean isEdible, boolean isRanged, int damage, int remainingAmmo){
-        this.items.add(new RangedWeapon(description, name, isEdible, isRanged, damage, remainingAmmo));
+    public void addFood(String name, String description, boolean isEdible, boolean isEquippable, int healthPoints){
+        this.items.add(new Food(name, description, isEdible, isEquippable, healthPoints));
     }
 
-    public void addMeleeWeapon(String description, String name,  boolean isEdible, boolean isRanged, int damage, int remainingAmmo){
-        this.items.add(new MeleeWeapon(description, name, isEdible, isRanged, damage, remainingAmmo));
+    public void addRangedWeapon(String name, String description, boolean isEdible, boolean isEquippable, int damage, int remainingAmmo){
+        this.items.add(new RangedWeapon(name, description, isEdible, isEquippable, damage, remainingAmmo));
+    }
+
+    public void addMeleeWeapon(String name, String description, boolean isEdible, boolean isEquippable, int damage){
+        this.items.add(new MeleeWeapon(name, description, isEdible, isEquippable, damage));
     }
 
     public Item findItem(String itemName) {
@@ -126,6 +126,7 @@ public class Room {
     public ArrayList<Item> getItemList(){
         return items;
     }
+
     //display items in a room when using the 'look' command
     public void displayItems(){
         for (Item item : items) {

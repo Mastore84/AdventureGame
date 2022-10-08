@@ -4,10 +4,12 @@ public class Player {
     private Room currentRoom;
     int hp;
     private ArrayList<Item> inventory;
+    private Weapon[] equppedWeapon;
 
     public Player() {
         this.hp = 100;
         inventory = new ArrayList<>();
+        equppedWeapon = new Weapon[1];
 
     }
     public int getHealth(){
@@ -62,7 +64,16 @@ public class Player {
         if(inventory.contains(item)) {
             System.out.println("You drop the " + item.getName() + ".");
             inventory.remove(item);
-            currentRoom.addItem(item.getName(), item.getDescription(), item.isEdible());
+            if(item instanceof Food){
+                currentRoom.addFood(item.getName(), item.getDescription(), item.isEdible(), item.isEquippable(),((Food) item).getHealthPoints());
+            } else if(item instanceof MeleeWeapon){
+                currentRoom.addMeleeWeapon(item.getName(), item.getDescription(), item.isEdible(), item.isEquippable(), ((Weapon) item).getDamage());
+            }else if(item instanceof RangedWeapon){
+                currentRoom.addRangedWeapon(item.getName(), item.getDescription(), item.isEdible(), item.isEquippable(), ((Weapon) item).getDamage(), ((RangedWeapon) item).getRemainingAmmo());
+            }
+            else {
+                currentRoom.addItem(item.getName(), item.getDescription(), item.isEdible(), item.isEquippable());
+            }
             return true;
         }
         else return false;
@@ -90,7 +101,7 @@ public class Player {
         return currentRoom;
     }
 
-    public void eat(String foodName){
+    public boolean eat(String foodName){
         for (Item item : inventory){
             if(item instanceof Food) {
                 if(foodName.equalsIgnoreCase(item.getName())) {
@@ -103,9 +114,9 @@ public class Player {
                     else {
                         System.out.println("The " + selectedFood + " heals you for " + selectedFood.healthPoints + " health points!");
                     }
-                }
+                }return true;
             }
-        }
+        }return false;
     }
     public void equip(){
 
