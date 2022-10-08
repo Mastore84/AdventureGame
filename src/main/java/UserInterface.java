@@ -41,25 +41,38 @@ public class UserInterface {
             }
             //take command
             else if (commandInput[0].equalsIgnoreCase("take") || commandInput[0].equalsIgnoreCase("get")) {
-                if (player.takeItem(player.getCurrentRoom().findItem(commandInput[1]))) {
-                    player.takeItem(player.getCurrentRoom().findItem(commandInput[1]));
-                } else {
-                    System.out.println("There is nothing like a(n) " + commandInput[1] + " to take around here.");
+                if(commandInput.length > 1) {
+                    if (player.takeItem(player.getCurrentRoom().findItem(commandInput[1]))) {
+                        player.takeItem(player.getCurrentRoom().findItem(commandInput[1]));
+                    }
+                    else {
+                        System.out.println("There is nothing like a(n) " + commandInput[1] + " to take around here.");
+                    }
+                }
+                else {
+                    System.out.println("Invalid command. Please type 'help' to get a list of available commands.");
                 }
             }
             //drop command
-            else if (commandInput[0].equalsIgnoreCase("drop")) {
+            else if (commandInput[0].equalsIgnoreCase("drop") && commandInput.length > 1) {
                 if (player.dropItem(player.findItem(commandInput[1]))){
                     player.dropItem(player.findItem(commandInput[1]));
-                } else System.out.println("You do not have a(n) " + commandInput[1] + " in your inventory.");
+                }
+                else {
+                    System.out.println("You do not have a(n) " + commandInput[1] + " in your inventory.");
+                }
             }
             //eat command
-            else if (commandInput[0].equalsIgnoreCase("eat")) {
-                if(player.findItem(commandInput[1]).isEdible()) {
-                    player.eat((commandInput[1]));
-                    player.getInventory().remove(player.findItem(commandInput[1]));
+            else if (commandInput[0].equalsIgnoreCase("eat") && commandInput.length > 1) {
+                if (player.findItem(commandInput[1]) != null) {
+                    if (player.findItem(commandInput[1]).isEdible()) {
+                        player.eat((commandInput[1]));
+                        player.getInventory().remove(player.findItem(commandInput[1]));
+                    } else if (!player.findItem(commandInput[1]).isEdible()) {
+                        System.out.println("You cannot eat the " + commandInput[1] + ".");
+                    }
+                    }else {System.out.println("You do not have a(n) " + commandInput[1] + " in your inventory.");
                 }
-                else System.out.println("You cannot eat the " + commandInput[1] + ".");
             }
             //look command
             else if (userInput.equals("look")) {

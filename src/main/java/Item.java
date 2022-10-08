@@ -3,10 +3,13 @@ public class Item {
     private String name;
     private String description;
     private boolean isEdible;
-    public Item(String name, String description, boolean isEdible) {
+    private boolean isEquippable;
+
+    public Item(String name, String description, boolean isEdible, boolean isEquippable) {
         this.name = name;
         this.description = description;
         this.isEdible = isEdible;
+        this.isEquippable = isEquippable;
     }
     public String getName() {
         return name;
@@ -20,7 +23,9 @@ public class Item {
     public boolean isEdible(){
         return isEdible;
     }
-
+    public boolean isEquippable(){
+        return isEquippable;
+    }
     public String toString() {
         return name;
     }
