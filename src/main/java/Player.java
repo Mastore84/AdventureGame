@@ -107,6 +107,12 @@ public class Player {
             }
         }
     }
+    public void equip(){
+
+    }
+    public void attack(){
+
+    }
 }
 
 

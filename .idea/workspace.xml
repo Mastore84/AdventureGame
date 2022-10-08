@@ -4,16 +4,17 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="ddb6c005-6a8b-41c3-8c0d-408bc07ee4c8" name="Changes" comment="changed Food constructor slightly">
+    <list default="true" id="ddb6c005-6a8b-41c3-8c0d-408bc07ee4c8" name="Changes" comment="added eat method in Player class,&#10;expanded Food class,&#10;added 'eat' command to UserInterface,&#10;minor changes/corrections to UserInterface">
+      <change afterPath="$PROJECT_DIR$/src/main/java/MeleeWeapon.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/RangedWeapon.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/Weapon.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/Food.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Food.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Item.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Item.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/Map.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Map.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/Player.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Player.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/Room.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Room.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/UserInterface.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/UserInterface.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/Player.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Player.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/Room.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Room.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Item.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Item.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -194,7 +195,14 @@
       <option name="project" value="LOCAL" />
       <updated>1665094025804</updated>
     </task>
-    <option name="localTasksCounter" value="21" />
+    <task id="LOCAL-00021" summary="added eat method in Player class,&#10;expanded Food class,&#10;added 'eat' command to UserInterface,&#10;minor changes/corrections to UserInterface">
+      <created>1665133337155</created>
+      <option name="number" value="00021" />
+      <option name="presentableId" value="LOCAL-00021" />
+      <option name="project" value="LOCAL" />
+      <updated>1665133337155</updated>
+    </task>
+    <option name="localTasksCounter" value="22" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -228,7 +236,8 @@
     <MESSAGE value="added health command/feature" />
     <MESSAGE value="added Food class (barebones)" />
     <MESSAGE value="changed Food constructor slightly" />
-    <option name="LAST_COMMIT_MESSAGE" value="changed Food constructor slightly" />
+    <MESSAGE value="added eat method in Player class,&#10;expanded Food class,&#10;added 'eat' command to UserInterface,&#10;minor changes/corrections to UserInterface" />
+    <option name="LAST_COMMIT_MESSAGE" value="added eat method in Player class,&#10;expanded Food class,&#10;added 'eat' command to UserInterface,&#10;minor changes/corrections to UserInterface" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

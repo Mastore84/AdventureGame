@@ -85,11 +85,13 @@ public class UserInterface {
                         'go east': Move east of your position.
                         'go west': Move west of your position.
                         'look': Look around the current room.
-                        'inventory' : Display your current inventory.
-                        'take' followed by an item name: Pick up a desired item.
-                        'drop': Choose an item from your inventory to drop.
+                        'inventory' : Display your current inventory. TODO: display equipped weapon
+                        'take' Pick up a desired item.
+                        'drop': Drop an item from your inventory.
                         'health': Check your current health status.
-                        'eat': Eat a food item from your inventory. TODO
+                        'eat': Eat a food item from your inventory.
+                        'equip': Equip a weapon from your inventory. TODO
+                        'attack': Attack an enemy. TODO
                         'help': Display this help screen.
                         'exit': Exits the game.
                                                             

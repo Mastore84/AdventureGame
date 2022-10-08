@@ -4,22 +4,23 @@ public class Map {
         Room room1 = new Room("Room1", "This room is filled with the stench of death and decay.\n" +
                 "Rats run across the putrid corpses of other failed adventures. Maybe you will join them. Tread carefully.");
         room1.addItem("lamp", "a shiny brass lamp", false);
-        room1.addItem("sword", "a shiny steel sword", false);
+        room1.addMeleeWeapon("sword", "a shiny steel sword", false, false, 50, 0);
 
         Room room2 = new Room("Room2", "The room appears very dark and desolate. The \n" +
                 "freezing temperature chills you to the bone, almost numbing you in the process.\n" +
                 "The feeling of wanting to escape grows increasingly stronger...");
-        room2.addFood("beef", "a slab of rotten beef", -30, true);
+        room2.addFood("beef", "a slab of rotten beef", true, -30);
 
         Room room3 = new Room("Room3", "You arrive in an ancient dungeon jail..\n" +
                 "What meets you is the remains of a goblin, its skeleton embracing the rusty chains");
+        room3.addRangedWeapon("a strong-looking crossbow", "crossbow", false, true, 35, 10);
 
         Room room4 = new Room("Room4", "What meets you in this room, is an old dining hall, which is centuries past \n" +
                 "its prime. Old majestic dining tables and elegant chairs for ancient nobility have now dissolved to a \n" +
                 "rusty and worn out version of its former glory. While you proceed through the room, you feel like you \n" +
                 "can sense the souls of its former inhabitants... Maybe they are ghosts, still holding royal feasts to \n" +
                 "this day");
-        room4.addFood("apple", "a shiny red apple", 20, true);
+        room4.addFood("apple", "a shiny red apple", true, 20);
 
         Room room5 = new Room("Room5", "When you enter you feel");
 
