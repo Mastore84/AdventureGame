@@ -143,6 +143,25 @@ public class UserInterface {
             else {
                 System.out.println("Invalid command. Please type 'help' to get a list of available commands.");
             }
+            break;
+
+            case"attack", "fire";
+                AttackEnum attack = player.attack;
+                switch (attack)
+                {
+                    case Fire:
+                        System.out.println("Fired weapon");
+                        break;
+                    case Melee:
+                        System.out.println("Melee attack");
+                        break;
+                     //case no_Ammo:
+
+                    case NOTHING_EQUIPPED:
+                        if(player.getEquippedWeapon == null) {
+                            System.out.println("No weapon in hand");
+                            break;
+                        }
         }
     }
 }
