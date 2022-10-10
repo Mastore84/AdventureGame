@@ -103,12 +103,12 @@ public class Room {
         this.items.add(new Food(name, description, isEdible, isEquippable, healthPoints));
     }
 
-    public void addRangedWeapon(String name, String description, boolean isEdible, boolean isEquippable, int damage, int remainingAmmo){
-        this.items.add(new RangedWeapon(name, description, isEdible, isEquippable, damage, remainingAmmo));
+    public void addRangedWeapon(String name, String description, boolean isEdible, boolean isEquippable, boolean isRanged, int damage, int remainingAmmo){
+        this.items.add(new RangedWeapon(name, description, isEdible, isEquippable, isRanged, damage, remainingAmmo));
     }
 
-    public void addMeleeWeapon(String name, String description, boolean isEdible, boolean isEquippable, int damage){
-        this.items.add(new MeleeWeapon(name, description, isEdible, isEquippable, damage));
+    public void addMeleeWeapon(String name, String description, boolean isEdible, boolean isEquippable, boolean isRanged, int damage){
+        this.items.add(new MeleeWeapon(name, description, isEdible, isEquippable, isRanged, damage));
     }
 
     public Item findItem(String itemName) {

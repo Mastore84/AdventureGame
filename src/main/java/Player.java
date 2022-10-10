@@ -4,12 +4,12 @@ public class Player {
     private Room currentRoom;
     int hp;
     private ArrayList<Item> inventory;
-    private Weapon[] equppedWeapon;
+    private ArrayList<Weapon> equippedWeapon;
 
     public Player() {
         this.hp = 100;
         inventory = new ArrayList<>();
-        equppedWeapon = new Weapon[1];
+        equippedWeapon = new ArrayList<>();
 
     }
     public int getHealth(){
@@ -51,6 +51,14 @@ public class Player {
             return inventory;
         }
     }
+    public ArrayList<Weapon> getEquippedWeapon(){
+        if(equippedWeapon.isEmpty()){
+            return null;
+        }else {
+            return equippedWeapon;
+        }
+    }
+
     public boolean takeItem(Item item){
         if(currentRoom.getItemList().contains(item)){
             System.out.println("You take the " + item.getName() + ".");
@@ -67,9 +75,9 @@ public class Player {
             if(item instanceof Food){
                 currentRoom.addFood(item.getName(), item.getDescription(), item.isEdible(), item.isEquippable(),((Food) item).getHealthPoints());
             } else if(item instanceof MeleeWeapon){
-                currentRoom.addMeleeWeapon(item.getName(), item.getDescription(), item.isEdible(), item.isEquippable(), ((Weapon) item).getDamage());
+                currentRoom.addMeleeWeapon(item.getName(), item.getDescription(), item.isEdible(), item.isEquippable(), ((Weapon) item).isRanged(), ((Weapon) item).getDamage());
             }else if(item instanceof RangedWeapon){
-                currentRoom.addRangedWeapon(item.getName(), item.getDescription(), item.isEdible(), item.isEquippable(), ((Weapon) item).getDamage(), ((RangedWeapon) item).getRemainingAmmo());
+                currentRoom.addRangedWeapon(item.getName(), item.getDescription(), item.isEdible(), item.isEquippable(), ((Weapon) item).isRanged(), ((Weapon) item).getDamage(), ((RangedWeapon) item).getRemainingAmmo());
             }
             else {
                 currentRoom.addItem(item.getName(), item.getDescription(), item.isEdible(), item.isEquippable());
@@ -101,6 +109,7 @@ public class Player {
         return currentRoom;
     }
 
+    //item actions
     public boolean eat(String foodName){
         for (Item item : inventory){
             if(item instanceof Food) {
@@ -118,7 +127,18 @@ public class Player {
             }
         }return false;
     }
-    public void equip(){
+    public boolean equip(String weaponName){
+        for (Item item : inventory){
+            if(item instanceof Weapon){
+                if (weaponName.equalsIgnoreCase(item.getName())){
+                    Weapon selectedWeapon = (Weapon) item;
+                    equippedWeapon.add(selectedWeapon);
+                    inventory.remove(selectedWeapon);
+                } return true;
+            }
+        }return false;
+    }
+    public void unequip(Weapon weapon){
 
     }
     public void attack(){

@@ -74,6 +74,20 @@ public class UserInterface {
                     }else {System.out.println("You do not have a(n) " + commandInput[1] + " in your inventory.");
                 }
             }
+            //equip command
+            else if(commandInput[0].equalsIgnoreCase("equip") && commandInput.length > 1){
+                if (player.findItem(commandInput[1]) != null) {
+                    if (player.findItem(commandInput[1]).isEquippable()) {
+                        player.equip(commandInput[1]);
+                        System.out.println("You equip the " + commandInput[1] + ".");
+                    }
+                    else if (!player.findItem(commandInput[1]).isEquippable()) {
+                        System.out.println("You cannot equip the " + commandInput[1] + ".");
+                    }
+                }else {
+                    System.out.println("You do not have a(n) " + commandInput[1] + " in you inventory.");
+                }
+            }
             //look command
             else if (userInput.equals("look")) {
                 if (!player.getCurrentRoom().getItemList().isEmpty()) {
@@ -88,6 +102,7 @@ public class UserInterface {
                 System.out.println("Goodbye! Thanks for playing!");
                 shouldContinue = false;
             }
+
             //help command
             else if (userInput.equalsIgnoreCase("help")) {
                 System.out.println("""
@@ -128,7 +143,7 @@ public class UserInterface {
                 else if(player.getHealth() < 10 && player.getHealth() > 0){
                     System.out.println("Health: " + player.getHealth() + " - you are close to death and are in immediate need of healing!");
                 }
-                else System.out.println(player.getHealth()/*"You don't have any health."*/);
+                else System.out.println("You don't have any health.");
             }
 
             //inventory command
@@ -139,8 +154,17 @@ public class UserInterface {
                         System.out.println(item.getName() + ",");
                     }
                 } else System.out.println("Your inventory is empty.");
-            }
-            else {
+                if (player.getEquippedWeapon() != null){
+                    for(Weapon item : player.getEquippedWeapon()){
+                        System.out.println("You have a(n) " + item.getName() + " equipped, which can deal " + item.getDamage() + " points of damage.");
+                        if(item.isRanged()){
+                            System.out.println("It has " + item.getRemainingAmmo() + " uses left.");
+                        }
+                    }
+                }else {
+                    System.out.println("You do not have a weapon equipped.");
+                }
+            } else {
                 System.out.println("Invalid command. Please type 'help' to get a list of available commands.");
             }
         }
