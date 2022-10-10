@@ -10,4 +10,7 @@ public class RangedWeapon extends Weapon{
         return remainingAmmo;
     }
 
+    public AttackEnum attack()
+    return AttackEnum.Fire;
+
 }
