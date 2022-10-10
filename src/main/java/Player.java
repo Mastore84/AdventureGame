@@ -95,6 +95,14 @@ public class Player {
         }
         return null;
     }
+    public Weapon findWeapon(String weaponName){
+        for (Weapon item : equippedWeapon){
+            if (item.getName().equalsIgnoreCase(weaponName)){
+                return item;
+            }
+        }
+        return null;
+    }
 
     //room related methods
     public String getRoomDescription(){
@@ -138,8 +146,22 @@ public class Player {
             }
         }return false;
     }
-    public void unequip(Weapon weapon){
-
+    public boolean unequip(String weaponName){
+        for (Item item : equippedWeapon){
+            if(item instanceof RangedWeapon){
+                if (weaponName.equalsIgnoreCase(item.getName())) {
+                    RangedWeapon selectedWeapon = (RangedWeapon) item;
+                    inventory.add(selectedWeapon);//currentRoom.addRangedWeapon(selectedWeapon.getName(), selectedWeapon.getDescription(), selectedWeapon.isEdible(), selectedWeapon.isEquippable(), selectedWeapon.isRanged(), selectedWeapon.getDamage(), selectedWeapon.getRemainingAmmo());
+                    equippedWeapon.remove(selectedWeapon);
+                }
+            }else if(item instanceof MeleeWeapon){
+                if (weaponName.equalsIgnoreCase(item.getName())) {
+                    MeleeWeapon selectedWeapon = (MeleeWeapon) item;
+                    inventory.add(selectedWeapon);/*currentRoom.addMeleeWeapon(selectedWeapon.getName(), selectedWeapon.getDescription(), selectedWeapon.isEdible(), selectedWeapon.isEquippable(), selectedWeapon.isRanged(), selectedWeapon.getDamage())));*/
+                    equippedWeapon.remove(selectedWeapon);
+                }
+            }return true;
+        }return false;
     }
     public void attack(){
 

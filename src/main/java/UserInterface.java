@@ -41,24 +41,21 @@ public class UserInterface {
             }
             //take command
             else if (commandInput[0].equalsIgnoreCase("take") || commandInput[0].equalsIgnoreCase("get")) {
-                if(commandInput.length > 1) {
+                if (commandInput.length > 1) {
                     if (player.takeItem(player.getCurrentRoom().findItem(commandInput[1]))) {
                         player.takeItem(player.getCurrentRoom().findItem(commandInput[1]));
-                    }
-                    else {
+                    } else {
                         System.out.println("There is nothing like a(n) " + commandInput[1] + " to take around here.");
                     }
-                }
-                else {
+                } else {
                     System.out.println("Invalid command. Please type 'help' to get a list of available commands.");
                 }
             }
             //drop command
             else if (commandInput[0].equalsIgnoreCase("drop") && commandInput.length > 1) {
-                if (player.dropItem(player.findItem(commandInput[1]))){
+                if (player.dropItem(player.findItem(commandInput[1]))) {
                     player.dropItem(player.findItem(commandInput[1]));
-                }
-                else {
+                } else {
                     System.out.println("You do not have a(n) " + commandInput[1] + " in your inventory.");
                 }
             }
@@ -71,21 +68,38 @@ public class UserInterface {
                     } else if (!player.findItem(commandInput[1]).isEdible()) {
                         System.out.println("You cannot eat the " + commandInput[1] + ".");
                     }
-                    }else {System.out.println("You do not have a(n) " + commandInput[1] + " in your inventory.");
+                } else {
+                    System.out.println("You do not have a(n) " + commandInput[1] + " in your inventory.");
                 }
             }
             //equip command
-            else if(commandInput[0].equalsIgnoreCase("equip") && commandInput.length > 1){
+            else if (commandInput[0].equalsIgnoreCase("equip") && commandInput.length > 1) {
                 if (player.findItem(commandInput[1]) != null) {
-                    if (player.findItem(commandInput[1]).isEquippable()) {
+                    if(player.getEquippedWeapon() != null){
+                        System.out.println("You already have a weapon equipped.\n" +
+                                "Unequip that weapon first.");
+                    }
+                    else if (player.findItem(commandInput[1]).isEquippable()) {
                         player.equip(commandInput[1]);
                         System.out.println("You equip the " + commandInput[1] + ".");
-                    }
-                    else if (!player.findItem(commandInput[1]).isEquippable()) {
+                    } else if (!player.findItem(commandInput[1]).isEquippable()) {
                         System.out.println("You cannot equip the " + commandInput[1] + ".");
                     }
-                }else {
+                } else {
                     System.out.println("You do not have a(n) " + commandInput[1] + " in you inventory.");
+                }
+            }
+            //unequip command
+            else if (commandInput[0].equalsIgnoreCase("unequip") && commandInput.length > 1) {
+                if (player.findWeapon(commandInput[1]) != null) {
+                    if (player.getEquippedWeapon().contains(player.findWeapon(commandInput[1]))) {
+                        //if (player.getEquippedWeapon() != null) {
+                            player.unequip(commandInput[1]);
+                            System.out.println("You unequip the " + commandInput[1] + ".");
+                        //}
+                    }
+                } else {
+                    System.out.println("You have no " + commandInput[1] + " equipped.");
                 }
             }
             //look command
@@ -113,12 +127,13 @@ public class UserInterface {
                         'go east': Move east of your position.
                         'go west': Move west of your position.
                         'look': Look around the current room.
-                        'inventory' : Display your current inventory. TODO: display equipped weapon
-                        'take' Pick up a desired item.
+                        'inventory' or 'inv': Display your current inventory.
+                        'take' or 'get': Pick up a desired item.
                         'drop': Drop an item from your inventory.
                         'health': Check your current health status.
                         'eat': Eat a food item from your inventory.
-                        'equip': Equip a weapon from your inventory. TODO
+                        'equip': Equip a weapon from your inventory.
+                        'unequip: Unequip a weapon you have equipped.
                         'attack': Attack an enemy. TODO
                         'help': Display this help screen.
                         'exit': Exits the game.
@@ -126,42 +141,37 @@ public class UserInterface {
                         """);
             }
             //health command
-            else if (userInput.equalsIgnoreCase("health")){
-                if(player.getHealth() >= 100){
+            else if (userInput.equalsIgnoreCase("health")) {
+                if (player.getHealth() >= 100) {
                     System.out.println("Health: " + player.getHealth() + " - you are in perfect health.");
-                }
-                else if (player.getHealth() < 100 && player.getHealth() > 74){
+                } else if (player.getHealth() < 100 && player.getHealth() > 74) {
                     System.out.println("Health: " + player.getHealth() + " - you are in good health.");
-                }
-                else if (player.getHealth() < 75 && player.getHealth() > 24){
+                } else if (player.getHealth() < 75 && player.getHealth() > 24) {
                     System.out.println("Health: " + player.getHealth() + " - you are moderately healthy, but you would do well to avoid fighting right now.");
-                }
-                else if (player.getHealth() < 25 && player.getHealth() > 9){
+                } else if (player.getHealth() < 25 && player.getHealth() > 9) {
                     System.out.println("Health: " + player.getHealth() + " - you are in extremely poor health, and should find a way to heal yourself\n" +
                             "as soon as possible!");
-                }
-                else if(player.getHealth() < 10 && player.getHealth() > 0){
+                } else if (player.getHealth() < 10 && player.getHealth() > 0) {
                     System.out.println("Health: " + player.getHealth() + " - you are close to death and are in immediate need of healing!");
-                }
-                else System.out.println("You don't have any health.");
+                } else System.out.println("You don't have any health.");
             }
 
             //inventory command
-            else if (userInput.equalsIgnoreCase(("inventory"))) {
+            else if (userInput.equalsIgnoreCase(("inventory")) || userInput.equalsIgnoreCase("inv")) {
                 if (player.getInventory() != null) {
                     System.out.println("Your inventory consists of the following item(s):");
                     for (Item item : player.getInventory()) {
                         System.out.println(item.getName() + ",");
                     }
                 } else System.out.println("Your inventory is empty.");
-                if (player.getEquippedWeapon() != null){
-                    for(Weapon item : player.getEquippedWeapon()){
+                if (player.getEquippedWeapon() != null) {
+                    for (Weapon item : player.getEquippedWeapon()) {
                         System.out.println("You have a(n) " + item.getName() + " equipped, which can deal " + item.getDamage() + " points of damage.");
-                        if(item.isRanged()){
+                        if (item.isRanged()) {
                             System.out.println("It has " + item.getRemainingAmmo() + " uses left.");
                         }
                     }
-                }else {
+                } else {
                     System.out.println("You do not have a weapon equipped.");
                 }
             } else {

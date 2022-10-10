@@ -4,16 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="ddb6c005-6a8b-41c3-8c0d-408bc07ee4c8" name="Changes" comment="Changed constructors for items,&#10;fixed some bugs relating to dropped items losing their properties as food, weapons, etc.,&#10;fixed bugs relating to typing 'eat' with an item not being in inventory">
+    <list default="true" id="ddb6c005-6a8b-41c3-8c0d-408bc07ee4c8" name="Changes" comment="added equip method in Player,&#10;added show weapon equipped functionality for inventory command in UserInterface,including weapon damage and remaining uses for ranged weapons">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Map.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Map.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/MeleeWeapon.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/MeleeWeapon.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/Player.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Player.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/RangedWeapon.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/RangedWeapon.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Room.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Room.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/UserInterface.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/UserInterface.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Weapon.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Weapon.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/Room.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Room.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Player.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Player.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -229,7 +224,14 @@
       <option name="project" value="LOCAL" />
       <updated>1665228820975</updated>
     </task>
-    <option name="localTasksCounter" value="26" />
+    <task id="LOCAL-00026" summary="added equip method in Player,&#10;added show weapon equipped functionality for inventory command in UserInterface,including weapon damage and remaining uses for ranged weapons">
+      <created>1665388811980</created>
+      <option name="number" value="00026" />
+      <option name="presentableId" value="LOCAL-00026" />
+      <option name="project" value="LOCAL" />
+      <updated>1665388811980</updated>
+    </task>
+    <option name="localTasksCounter" value="27" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -267,7 +269,8 @@
     <MESSAGE value="Added Weapon class,&#10;added MeleeWeapon and RangedWeapon subclasses, &#10;added add methods for melee and ranged weapons" />
     <MESSAGE value="Changed constructors for items,&#10;fixed some bugs relating to dropped items losing their properties as food, weapons, etc." />
     <MESSAGE value="Changed constructors for items,&#10;fixed some bugs relating to dropped items losing their properties as food, weapons, etc.,&#10;fixed bugs relating to typing 'eat' with an item not being in inventory" />
-    <option name="LAST_COMMIT_MESSAGE" value="Changed constructors for items,&#10;fixed some bugs relating to dropped items losing their properties as food, weapons, etc.,&#10;fixed bugs relating to typing 'eat' with an item not being in inventory" />
+    <MESSAGE value="added equip method in Player,&#10;added show weapon equipped functionality for inventory command in UserInterface,including weapon damage and remaining uses for ranged weapons" />
+    <option name="LAST_COMMIT_MESSAGE" value="added equip method in Player,&#10;added show weapon equipped functionality for inventory command in UserInterface,including weapon damage and remaining uses for ranged weapons" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
