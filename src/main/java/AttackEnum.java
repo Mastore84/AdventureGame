@@ -1,4 +1,4 @@
-public class AttackEnum {
+enum AttackEnum {
     Melee,
     Fired,
     NOTHING_EQUIPPED,
