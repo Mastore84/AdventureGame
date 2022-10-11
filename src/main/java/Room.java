@@ -139,7 +139,7 @@ public class Room {
     //display items in a room when using the 'look' command
     public void displayItems(){
         for (Item item : items) {
-            System.out.print("> " + item.getDescription());
+            System.out.println("> " + item.getDescription());
         }
     }
     public void displayEnemies(){
