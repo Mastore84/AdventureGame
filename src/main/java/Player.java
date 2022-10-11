@@ -68,24 +68,6 @@ public class Player {
         }
         else return false;
     }
-    public boolean dropItem(Item item){
-        if(inventory.contains(item)) {
-            System.out.println("You drop the " + item.getName() + ".");
-            inventory.remove(item);
-            if(item instanceof Food){
-                currentRoom.addFood(item.getName(), item.getDescription(), item.isEdible(), item.isEquippable(),((Food) item).getHealthPoints());
-            } else if(item instanceof MeleeWeapon){
-                currentRoom.addMeleeWeapon(item.getName(), item.getDescription(), item.isEdible(), item.isEquippable(), ((Weapon) item).isRanged(), ((Weapon) item).getDamage());
-            }else if(item instanceof RangedWeapon){
-                currentRoom.addRangedWeapon(item.getName(), item.getDescription(), item.isEdible(), item.isEquippable(), ((Weapon) item).isRanged(), ((Weapon) item).getDamage(), ((RangedWeapon) item).getRemainingAmmo());
-            }
-            else {
-                currentRoom.addItem(item.getName(), item.getDescription(), item.isEdible(), item.isEquippable());
-            }
-            return true;
-        }
-        else return false;
-    }
 
     public Item findItem(String itemName) {
         for (Item item : inventory) {
@@ -118,6 +100,24 @@ public class Player {
     }
 
     //item actions
+    public boolean dropItem(Item item){
+        if(inventory.contains(item)) {
+            System.out.println("You drop the " + item.getName() + ".");
+            inventory.remove(item);
+            if(item instanceof Food){
+                currentRoom.addFood(item.getName(), item.getDescription(), item.isEdible(), item.isEquippable(),((Food) item).getHealthPoints());
+            } else if(item instanceof MeleeWeapon){
+                currentRoom.addMeleeWeapon(item.getName(), item.getDescription(), item.isEdible(), item.isEquippable(), ((Weapon) item).isRanged(), ((Weapon) item).getDamage());
+            }else if(item instanceof RangedWeapon){
+                currentRoom.addRangedWeapon(item.getName(), item.getDescription(), item.isEdible(), item.isEquippable(), ((Weapon) item).isRanged(), ((Weapon) item).getDamage(), ((RangedWeapon) item).getRemainingAmmo());
+            }
+            else {
+                currentRoom.addItem(item.getName(), item.getDescription(), item.isEdible(), item.isEquippable());
+            }
+            return true;
+        }
+        else return false;
+    }
     public boolean eat(String foodName){
         for (Item item : inventory){
             if(item instanceof Food) {
@@ -151,20 +151,25 @@ public class Player {
             if(item instanceof RangedWeapon){
                 if (weaponName.equalsIgnoreCase(item.getName())) {
                     RangedWeapon selectedWeapon = (RangedWeapon) item;
-                    inventory.add(selectedWeapon);//currentRoom.addRangedWeapon(selectedWeapon.getName(), selectedWeapon.getDescription(), selectedWeapon.isEdible(), selectedWeapon.isEquippable(), selectedWeapon.isRanged(), selectedWeapon.getDamage(), selectedWeapon.getRemainingAmmo());
+                    inventory.add(selectedWeapon);
                     equippedWeapon.remove(selectedWeapon);
                 }
             }else if(item instanceof MeleeWeapon){
                 if (weaponName.equalsIgnoreCase(item.getName())) {
                     MeleeWeapon selectedWeapon = (MeleeWeapon) item;
-                    inventory.add(selectedWeapon);/*currentRoom.addMeleeWeapon(selectedWeapon.getName(), selectedWeapon.getDescription(), selectedWeapon.isEdible(), selectedWeapon.isEquippable(), selectedWeapon.isRanged(), selectedWeapon.getDamage())));*/
+                    inventory.add(selectedWeapon);
                     equippedWeapon.remove(selectedWeapon);
                 }
             }return true;
         }return false;
     }
-    public void attack(){
+    public int attack(int damage){
+        return damage;
+    }
 
+    public int getHit(int damage){
+
+        return damage;
     }
 }
 

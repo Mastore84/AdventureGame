@@ -12,10 +12,23 @@ public class Enemy {
         this.weapon = weapon;
     }
 
-    public void attack(){
-
+    public String getName(){
+        return name;
     }
-    public void getsHit(){
+    public String getDescription(){
+        return description;
+    }
+    public int getHealthPoints(){
+        return healthPoints;
+    }
+    public Weapon getWeapon(){
+        return weapon;
+    }
 
+    public int attack(int damage){
+        return damage;
+    }
+    public int getHit(int damage){
+        return damage;
     }
 }

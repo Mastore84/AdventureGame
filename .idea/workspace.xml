@@ -4,15 +4,13 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="ddb6c005-6a8b-41c3-8c0d-408bc07ee4c8" name="Changes" comment="Changed constructors for items,&#10;fixed some bugs relating to dropped items losing their properties as food, weapons, etc.">
-      <change afterPath="$PROJECT_DIR$/src/main/java/AttackEnum.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_27-09-2022_15_55__Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_27-09-2022_15_55__Changes_.xml" afterDir="false" />
+    <list default="true" id="72ee6e95-e1e1-4c81-9838-b6e7eb9496e8" name="Changes" comment="added setters and getters to Enemy,&#10;added displayEnemies and addEnemy methods to Room class,&#10;plus minor changes across the board">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/MeleeWeapon.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/MeleeWeapon.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Player.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Player.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/RangedWeapon.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/RangedWeapon.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Room.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Room.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/UserInterface.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/UserInterface.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Weapon.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Weapon.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Player.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Player.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Room.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Room.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/test.class" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -47,7 +45,7 @@
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="ddb6c005-6a8b-41c3-8c0d-408bc07ee4c8" name="Changes" comment="Added descriptions and implemented look function properly." />
+      <changelist id="72ee6e95-e1e1-4c81-9838-b6e7eb9496e8" name="Changes" comment="added unequip functionality for weapons,&#10;added limit of 1 for amount of equipped weapons" />
       <created>1664184601460</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
@@ -214,7 +212,21 @@
       <option name="project" value="LOCAL" />
       <updated>1665228685978</updated>
     </task>
-    <option name="localTasksCounter" value="24" />
+    <task id="LOCAL-00024" summary="added Enemy class plus constructor and empty attack and getsHit methods">
+      <created>1665488901617</created>
+      <option name="number" value="00024" />
+      <option name="presentableId" value="LOCAL-00024" />
+      <option name="project" value="LOCAL" />
+      <updated>1665488901617</updated>
+    </task>
+    <task id="LOCAL-00025" summary="added setters and getters to Enemy,&#10;added displayEnemies and addEnemy methods to Room class,&#10;plus minor changes across the board">
+      <created>1665494700721</created>
+      <option name="number" value="00025" />
+      <option name="presentableId" value="LOCAL-00025" />
+      <option name="project" value="LOCAL" />
+      <updated>1665494700721</updated>
+    </task>
+    <option name="localTasksCounter" value="26" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -251,7 +263,9 @@
     <MESSAGE value="added eat method in Player class,&#10;expanded Food class,&#10;added 'eat' command to UserInterface,&#10;minor changes/corrections to UserInterface" />
     <MESSAGE value="Added Weapon class,&#10;added MeleeWeapon and RangedWeapon subclasses, &#10;added add methods for melee and ranged weapons" />
     <MESSAGE value="Changed constructors for items,&#10;fixed some bugs relating to dropped items losing their properties as food, weapons, etc." />
-    <option name="LAST_COMMIT_MESSAGE" value="Changed constructors for items,&#10;fixed some bugs relating to dropped items losing their properties as food, weapons, etc." />
+    <MESSAGE value="added Enemy class plus constructor and empty attack and getsHit methods" />
+    <MESSAGE value="added setters and getters to Enemy,&#10;added displayEnemies and addEnemy methods to Room class,&#10;plus minor changes across the board" />
+    <option name="LAST_COMMIT_MESSAGE" value="added setters and getters to Enemy,&#10;added displayEnemies and addEnemy methods to Room class,&#10;plus minor changes across the board" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

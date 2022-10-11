@@ -15,7 +15,7 @@ public abstract class Weapon extends Item{
     public int getDamage(){
         return damage;
     }
-    public abstract AttackEnum attack();
+    //public abstract AttackEnum attack();
 
 
     public boolean isRanged(){

@@ -4,7 +4,8 @@ public class Map {
         Room room1 = new Room("Room1", "This room is filled with the stench of death and decay.\n" +
                 "Rats run across the putrid corpses of other failed adventures. Maybe you will join them. Tread carefully.");
         room1.addItem("lamp", "a shiny brass lamp", false, false);
-        room1.addMeleeWeapon("sword", "a shiny steel sword", false, true, false, 50);
+        room1.addMeleeWeapon("sword", "a shiny steel sword", false, true, false, 35);
+        room1.addEnemy("goblin", "an angry goblin, looking for a fight", 60, new MeleeWeapon("sword", "a shiny steel sword", false, true, false, 35));
 
         Room room2 = new Room("Room2", "The room appears very dark and desolate. The \n" +
                 "freezing temperature chills you to the bone, almost numbing you in the process.\n" +
@@ -13,7 +14,7 @@ public class Map {
 
         Room room3 = new Room("Room3", "You arrive in an ancient dungeon jail..\n" +
                 "What meets you is the remains of a goblin, its skeleton embracing the rusty chains");
-        room3.addRangedWeapon("crossbow", "a strong-looking crossbow", false, true, true, 35, 10);
+        room3.addRangedWeapon("crossbow", "a strong-looking crossbow", false, true, true, 50, 5);
 
         Room room4 = new Room("Room4", "What meets you in this room, is an old dining hall, which is centuries past \n" +
                 "its prime. Old majestic dining tables and elegant chairs for ancient nobility have now dissolved to a \n" +
