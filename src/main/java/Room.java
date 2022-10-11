@@ -3,7 +3,7 @@ import java.util.ArrayList;
 public class Room {
 
     private ArrayList<Item> items;
-
+    private ArrayList<Enemy> enemies;
     private String roomName;
     private String roomDescription;
     private Room north;
@@ -19,6 +19,7 @@ public class Room {
         east = null;
         west = null;
         this.items = new ArrayList<>();
+        this.enemies = new ArrayList<>();
     }
 
     public void setNorth(Room room) {
@@ -111,6 +112,10 @@ public class Room {
         this.items.add(new MeleeWeapon(name, description, isEdible, isEquippable, isRanged, damage));
     }
 
+    public void addEnemy(String name, String description, int healthPoints, Weapon weapon){
+        this.enemies.add(new Enemy(name, description, healthPoints, weapon));
+    }
+
     public Item findItem(String itemName) {
         for (Item item : items) {
             if (item.getName().equalsIgnoreCase(itemName)) {
@@ -127,11 +132,19 @@ public class Room {
         return items;
     }
 
+    public ArrayList<Enemy> getEnemyList() {
+        return enemies;
+    }
+
     //display items in a room when using the 'look' command
     public void displayItems(){
         for (Item item : items) {
-            System.out.print(item.getDescription());
-            System.out.println(", ");
+            System.out.print("> " + item.getDescription());
+        }
+    }
+    public void displayEnemies(){
+        for (Enemy enemy : enemies){
+            System.out.println("> " + enemy.getDescription());
         }
     }
 }

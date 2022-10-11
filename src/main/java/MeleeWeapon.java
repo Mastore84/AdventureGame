@@ -4,7 +4,7 @@ public class MeleeWeapon extends Weapon {
         super(name, description, isEdible, isEquippable, isRanged, damage);
     }
 
-    public AttackEnum attack() {
+  /*  public AttackEnum attack() {
         return AttackEnum.Melee;
-    }
+    }*/
 }

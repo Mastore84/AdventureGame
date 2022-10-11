@@ -1,7 +1,7 @@
-public class AttackEnum {
+/*public class AttackEnum {
     Melee,
-    Fired,
+    Fire,
     NOTHING_EQUIPPED,
 }
 
-//Her skal der også være for noAmmo osv.
+//Her skal der også være for noAmmo osv.*/

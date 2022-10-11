@@ -108,7 +108,12 @@ public class UserInterface {
                     System.out.println(player.getRoomDescription());
                     System.out.println("You see the following item(s):");
                     player.getCurrentRoom().displayItems();
-                } else System.out.println(player.getRoomDescription());
+                }
+                if (!player.getCurrentRoom().getEnemyList().isEmpty()){
+                    System.out.println("\nYou see the following monster(s):");
+                    player.getCurrentRoom().displayEnemies();
+                }
+                else System.out.println(player.getRoomDescription());
 
             }
             //exit command
