@@ -137,11 +137,12 @@ public class Room {
     }
     public Enemy getEnemy (String enemyName){
         for (Enemy enemy : enemies){
-            if(enemies.contains(enemyName)){
+            if(enemy.getName().equalsIgnoreCase(enemyName)){
                 return enemy;
             }
         }return null;
     }
+
     public Enemy getClosestEnemy(){
         return enemies.get(0);
     }

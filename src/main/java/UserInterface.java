@@ -75,11 +75,10 @@ public class UserInterface {
             //equip command
             else if (commandInput[0].equalsIgnoreCase("equip") && commandInput.length > 1) {
                 if (player.findItem(commandInput[1]) != null) {
-                    if(player.getEquippedWeapon() != null){
+                    if (player.getEquippedWeapon() != null) {
                         System.out.println("You already have a weapon equipped.\n" +
                                 "Unequip that weapon first.");
-                    }
-                    else if (player.findItem(commandInput[1]).isEquippable()) {
+                    } else if (player.findItem(commandInput[1]).isEquippable()) {
                         player.equip(commandInput[1]);
                         System.out.println("You equip the " + commandInput[1] + ".");
                     } else if (!player.findItem(commandInput[1]).isEquippable()) {
@@ -93,8 +92,8 @@ public class UserInterface {
             else if (commandInput[0].equalsIgnoreCase("unequip") && commandInput.length > 1) {
                 if (player.findWeapon(commandInput[1]) != null) {
                     if (player.getEquippedWeapon().contains(player.findWeapon(commandInput[1]))) {
-                            player.unequip(commandInput[1]);
-                            System.out.println("You unequip the " + commandInput[1] + ".");
+                        player.unequip(commandInput[1]);
+                        System.out.println("You unequip the " + commandInput[1] + ".");
                     }
                 } else {
                     System.out.println("You have no " + commandInput[1] + " equipped.");
@@ -106,11 +105,11 @@ public class UserInterface {
                     System.out.println(player.getRoomDescription());
                     System.out.println("You see the following item(s):");
                     player.getCurrentRoom().displayItems();
-                    if (!player.getCurrentRoom().getEnemyList().isEmpty()){
+                    if (!player.getCurrentRoom().getEnemyList().isEmpty()) {
                         System.out.println("You see the following monster(s):");
                         player.getCurrentRoom().displayEnemies();
                     }
-                }else System.out.println(player.getRoomDescription());
+                } else System.out.println(player.getRoomDescription());
 
             }
             //exit command
@@ -144,26 +143,20 @@ public class UserInterface {
             }
             //attack command
             //TODO sequence: player attacks enemy, damage is dealt,
-            else if (commandInput[0].equalsIgnoreCase("attack")){
-                if (player.getEquippedWeapon() != null){
-                    if(!player.getCurrentRoom().getEnemyList().isEmpty()){
-                        if(player.getCurrentRoom().getEnemyList().contains(player.getCurrentRoom())){
-                           player.getCurrentRoom().getEnemy(commandInput[1]).getHit(player.attack(player.getEquippedWeapon().indexOf(0)));
-                            System.out.println("You attack the " + commandInput[1] + " for " + player.getEquippedWeapon().get(0).getDamage() + " damage!");
-                           player.getCurrentRoom().getEnemy(commandInput[1]).attack(player.getCurrentRoom().getEnemy(commandInput[1]).getWeapon().getDamage());
-                        }
-                        else if (commandInput[1].equals(null)) {
-                            player.getCurrentRoom().getClosestEnemy().getHit(player.attack(player.getEquippedWeapon().indexOf(0)));
-                            System.out.println("this works");
-
-                        }
-                    }
-                }else if (player.getEquippedWeapon() == null){
-                    System.out.println("You cannot attack without a weapon equipped!");
-                }
+            else if (commandInput[0].equalsIgnoreCase("attack")) {
+                if (player.getEquippedWeapon() != null) {
+                    if (commandInput.length > 1) {
+                        if (player.getCurrentRoom().getEnemyList() != null) {
+                            if (player.getCurrentRoom().getEnemy(commandInput[1]) != null) {
+                                player.getCurrentRoom().getEnemy(commandInput[1]).getHit(player.attack(player.getEquippedWeapon().indexOf(1)));
+                                System.out.println("You attack the " + commandInput[1] + " for " + player.getEquippedWeapon().get(0).getDamage() + " damage!");
+                                player.getHit(player.getCurrentRoom().getEnemy(commandInput[1]).getWeapon().getDamage());
+                                System.out.println("The " + commandInput[1] + " attacks you for " + player.getCurrentRoom().getEnemy(commandInput[1]).getWeapon().getDamage() + " damage!");
+                            }else System.out.println("There is no " + commandInput[1] + " for you to attack here.");
+                        } else System.out.println("There is no enemy here for you to attack.");
+                    } else System.out.println("Please state which enemy you wish to attack.");
+                }else System.out.println("You cannot attack without a weapon equipped!");
             }
-            //if monster is not dead, enemy attacks player, damage is dealt
-            // if player is not dead, player gets to act again
             //if enemy is dead, remove enemy and drop equipped weapon
             //if player is dead, game ends
 
