@@ -93,10 +93,8 @@ public class UserInterface {
             else if (commandInput[0].equalsIgnoreCase("unequip") && commandInput.length > 1) {
                 if (player.findWeapon(commandInput[1]) != null) {
                     if (player.getEquippedWeapon().contains(player.findWeapon(commandInput[1]))) {
-                        //if (player.getEquippedWeapon() != null) {
                             player.unequip(commandInput[1]);
                             System.out.println("You unequip the " + commandInput[1] + ".");
-                        //}
                     }
                 } else {
                     System.out.println("You have no " + commandInput[1] + " equipped.");
@@ -144,6 +142,31 @@ public class UserInterface {
                                                             
                         """);
             }
+            //attack command
+            //TODO sequence: player attacks enemy, damage is dealt,
+            else if (commandInput[0].equalsIgnoreCase("attack")){
+                if (player.getEquippedWeapon() != null){
+                    if(!player.getCurrentRoom().getEnemyList().isEmpty()){
+                        if(player.getCurrentRoom().getEnemyList().contains(player.getCurrentRoom())){
+                           player.getCurrentRoom().getEnemy(commandInput[1]).getHit(player.attack(player.getEquippedWeapon().indexOf(0)));
+                            System.out.println("You attack the " + commandInput[1] + " for " + player.getEquippedWeapon().get(0).getDamage() + " damage!");
+                           player.getCurrentRoom().getEnemy(commandInput[1]).attack(player.getCurrentRoom().getEnemy(commandInput[1]).getWeapon().getDamage());
+                        }
+                        else if (commandInput[1].equals(null)) {
+                            player.getCurrentRoom().getClosestEnemy().getHit(player.attack(player.getEquippedWeapon().indexOf(0)));
+                            System.out.println("this works");
+
+                        }
+                    }
+                }else if (player.getEquippedWeapon() == null){
+                    System.out.println("You cannot attack without a weapon equipped!");
+                }
+            }
+            //if monster is not dead, enemy attacks player, damage is dealt
+            // if player is not dead, player gets to act again
+            //if enemy is dead, remove enemy and drop equipped weapon
+            //if player is dead, game ends
+
             //health command
             else if (userInput.equalsIgnoreCase("health")) {
                 if (player.getHealth() >= 100) {

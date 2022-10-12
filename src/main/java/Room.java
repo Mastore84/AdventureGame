@@ -135,8 +135,18 @@ public class Room {
     public ArrayList<Enemy> getEnemyList() {
         return enemies;
     }
+    public Enemy getEnemy (String enemyName){
+        for (Enemy enemy : enemies){
+            if(enemies.contains(enemyName)){
+                return enemy;
+            }
+        }return null;
+    }
+    public Enemy getClosestEnemy(){
+        return enemies.get(0);
+    }
 
-    //display items in a room when using the 'look' command
+    //display items and enemies in a room when using the 'look' command
     public void displayItems(){
         for (Item item : items) {
             System.out.println("> " + item.getDescription());

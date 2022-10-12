@@ -163,13 +163,14 @@ public class Player {
             }return true;
         }return false;
     }
+
+    //attack methods
     public int attack(int damage){
         return damage;
     }
 
-    public int getHit(int damage){
-
-        return damage;
+    public void getHit(int damage){
+        hp = hp - damage;
     }
 }
 

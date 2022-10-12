@@ -28,7 +28,7 @@ public class Enemy {
     public int attack(int damage){
         return damage;
     }
-    public int getHit(int damage){
-        return damage;
+    public void getHit(int damage){
+        healthPoints = healthPoints - damage;
     }
 }
