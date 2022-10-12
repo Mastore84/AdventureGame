@@ -123,19 +123,16 @@ public class UserInterface {
                 System.out.println("""
                         Available commands:
                                                             
-                        'go north': Move north of your position.
-                        'go south': Move south of your position.
-                        'go east': Move east of your position.
-                        'go west': Move west of your position.
+                        'go *north*south*east*west*': Go in the desired direction.
                         'look': Look around the current room.
                         'inventory' or 'inv': Display your current inventory.
-                        'take' or 'get': Pick up a desired item.
-                        'drop': Drop an item from your inventory.
+                        'take *item*' or 'get *item*': Pick up a desired item.
+                        'drop *item*': Drop an item from your inventory.
                         'health': Check your current health status.
-                        'eat': Eat a food item from your inventory.
-                        'equip': Equip a weapon from your inventory.
-                        'unequip: Unequip a weapon you have equipped.
-                        'attack': Attack an enemy. TODO
+                        'eat *item*': Eat a food item from your inventory.
+                        'equip *item*': Equip a weapon from your inventory.
+                        'unequip *item*': Unequip a weapon you have equipped.
+                        'attack *enemy*': Attack an enemy.
                         'help': Display this help screen.
                         'exit': Exits the game.
                                                             
