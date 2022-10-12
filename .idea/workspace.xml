@@ -4,12 +4,13 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="72ee6e95-e1e1-4c81-9838-b6e7eb9496e8" name="Changes" comment="started attack and getHit methods plus attack command in UserInterface">
+    <list default="true" id="72ee6e95-e1e1-4c81-9838-b6e7eb9496e8" name="Changes" comment="attack command in progress (not finished but current code is working)">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Room.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Room.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Player.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Player.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/RangedWeapon.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/RangedWeapon.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/UserInterface.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/UserInterface.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Weapon.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Weapon.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/Player.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Player.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/Room.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Room.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -239,7 +240,14 @@
       <option name="project" value="LOCAL" />
       <updated>1665566247818</updated>
     </task>
-    <option name="localTasksCounter" value="28" />
+    <task id="LOCAL-00028" summary="attack command in progress (not finished but current code is working)">
+      <created>1665571907909</created>
+      <option name="number" value="00028" />
+      <option name="presentableId" value="LOCAL-00028" />
+      <option name="project" value="LOCAL" />
+      <updated>1665571907909</updated>
+    </task>
+    <option name="localTasksCounter" value="29" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -254,7 +262,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Added some descriptions and minor code" />
     <MESSAGE value="After help from Tine" />
     <MESSAGE value="Altered set methods" />
     <MESSAGE value="Added descriptions and implemented look function properly." />
@@ -279,7 +286,8 @@
     <MESSAGE value="added setters and getters to Enemy,&#10;added displayEnemies and addEnemy methods to Room class,&#10;plus minor changes across the board" />
     <MESSAGE value="fixed minor bug regarding displaying enemies using the 'look' command" />
     <MESSAGE value="started attack and getHit methods plus attack command in UserInterface" />
-    <option name="LAST_COMMIT_MESSAGE" value="started attack and getHit methods plus attack command in UserInterface" />
+    <MESSAGE value="attack command in progress (not finished but current code is working)" />
+    <option name="LAST_COMMIT_MESSAGE" value="attack command in progress (not finished but current code is working)" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

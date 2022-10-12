@@ -10,6 +10,10 @@ public class RangedWeapon extends Weapon{
         return remainingAmmo;
     }
 
+    public void removeRemainingAmmo(){
+        remainingAmmo = remainingAmmo - 1;
+    }
+
    /* public AttackEnum attack(){
     return AttackEnum.Fire;
 */

@@ -91,7 +91,7 @@ public class UserInterface {
             //unequip command
             else if (commandInput[0].equalsIgnoreCase("unequip") && commandInput.length > 1) {
                 if (player.findWeapon(commandInput[1]) != null) {
-                    if (player.getEquippedWeapon().contains(player.findWeapon(commandInput[1]))) {
+                    if (player.getEquippedWeapon().equals(player.findWeapon(commandInput[1]))) {
                         player.unequip(commandInput[1]);
                         System.out.println("You unequip the " + commandInput[1] + ".");
                     }
@@ -142,22 +142,28 @@ public class UserInterface {
                         """);
             }
             //attack command
-            //TODO sequence: player attacks enemy, damage is dealt,
             else if (commandInput[0].equalsIgnoreCase("attack")) {
                 if (player.getEquippedWeapon() != null) {
                     if (commandInput.length > 1) {
-                        if (player.getCurrentRoom().getEnemyList() != null) {
+                        if(player.getEquippedWeapon().getRemainingAmmo() == 0 && player.getEquippedWeapon().isRanged() == true){
+                            System.out.println("Your weapon has no more ammunition in it.");
+                        } else if (player.getCurrentRoom().getEnemyList() != null) {
                             if (player.getCurrentRoom().getEnemy(commandInput[1]) != null) {
-                                player.getCurrentRoom().getEnemy(commandInput[1]).getHit(player.attack(player.getEquippedWeapon().indexOf(1)));
-                                System.out.println("You attack the " + commandInput[1] + " for " + player.getEquippedWeapon().get(0).getDamage() + " damage!");
+                                player.getCurrentRoom().getEnemy(commandInput[1]).getHit(player.attack(player.getEquippedWeapon().getDamage()));
+                                System.out.println("You attack the " + commandInput[1] + " for " + player.getEquippedWeapon().getDamage() + " damage!");
+                                if(player.getEquippedWeapon().isRanged() && player.getEquippedWeapon().getRemainingAmmo() != 0){
+                                    player.getEquippedWeapon().removeRemainingAmmo();
+                                }
                                 player.getHit(player.getCurrentRoom().getEnemy(commandInput[1]).getWeapon().getDamage());
                                 System.out.println("The " + commandInput[1] + " attacks you for " + player.getCurrentRoom().getEnemy(commandInput[1]).getWeapon().getDamage() + " damage!");
+                                System.out.println(player.getHealth());
+                                System.out.println(player.getCurrentRoom().getClosestEnemy().getHealthPoints());
                             }else System.out.println("There is no " + commandInput[1] + " for you to attack here.");
                         } else System.out.println("There is no enemy here for you to attack.");
                     } else System.out.println("Please state which enemy you wish to attack.");
                 }else System.out.println("You cannot attack without a weapon equipped!");
             }
-            //if enemy is dead, remove enemy and drop equipped weapon
+            //if enemy is dead, remove enemy
             //if player is dead, game ends
 
             //health command
@@ -185,10 +191,10 @@ public class UserInterface {
                     }
                 } else System.out.println("Your inventory is empty.");
                 if (player.getEquippedWeapon() != null) {
-                    for (Weapon item : player.getEquippedWeapon()) {
+                    for (Weapon item : player.getEquippedWeaponList()) {
                         System.out.println("You have a(n) " + item.getName() + " equipped, which can deal " + item.getDamage() + " points of damage.");
                         if (item.isRanged()) {
-                            System.out.println("It has " + item.getRemainingAmmo() + " uses left.");
+                            System.out.println("It has " + item.getRemainingAmmo() + " use(s) left.");
                         }
                     }
                 } else {

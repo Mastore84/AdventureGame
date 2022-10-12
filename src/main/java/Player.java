@@ -51,12 +51,15 @@ public class Player {
             return inventory;
         }
     }
-    public ArrayList<Weapon> getEquippedWeapon(){
+    public Weapon getEquippedWeapon(){
         if(equippedWeapon.isEmpty()){
             return null;
         }else {
-            return equippedWeapon;
+            return equippedWeapon.get(0);
         }
+    }
+    public ArrayList<Weapon> getEquippedWeaponList(){
+        return equippedWeapon;
     }
 
     public boolean takeItem(Item item){

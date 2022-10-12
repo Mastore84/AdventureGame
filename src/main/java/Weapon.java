@@ -12,6 +12,9 @@ public abstract class Weapon extends Item{
     public int getRemainingAmmo(){
         return remainingAmmo;
     }
+    public void removeRemainingAmmo(){
+        remainingAmmo = remainingAmmo - 1;
+    }
     public int getDamage(){
         return damage;
     }
