@@ -4,7 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="72ee6e95-e1e1-4c81-9838-b6e7eb9496e8" name="Changes" comment="attack function working,&#10;still need to code functionality regarding player and enemy death">
+    <list default="true" id="72ee6e95-e1e1-4c81-9838-b6e7eb9496e8" name="Changes" comment="changed help command slightly">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Map.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Map.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/UserInterface.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/UserInterface.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -249,7 +251,14 @@
       <option name="project" value="LOCAL" />
       <updated>1665574008944</updated>
     </task>
-    <option name="localTasksCounter" value="30" />
+    <task id="LOCAL-00030" summary="changed help command slightly">
+      <created>1665574365346</created>
+      <option name="number" value="00030" />
+      <option name="presentableId" value="LOCAL-00030" />
+      <option name="project" value="LOCAL" />
+      <updated>1665574365346</updated>
+    </task>
+    <option name="localTasksCounter" value="31" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -264,7 +273,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Altered set methods" />
     <MESSAGE value="Added descriptions and implemented look function properly." />
     <MESSAGE value="Added workspace.xml file (re-commit)" />
     <MESSAGE value="Added Map class" />
@@ -289,7 +297,8 @@
     <MESSAGE value="started attack and getHit methods plus attack command in UserInterface" />
     <MESSAGE value="attack command in progress (not finished but current code is working)" />
     <MESSAGE value="attack function working,&#10;still need to code functionality regarding player and enemy death" />
-    <option name="LAST_COMMIT_MESSAGE" value="attack function working,&#10;still need to code functionality regarding player and enemy death" />
+    <MESSAGE value="changed help command slightly" />
+    <option name="LAST_COMMIT_MESSAGE" value="changed help command slightly" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

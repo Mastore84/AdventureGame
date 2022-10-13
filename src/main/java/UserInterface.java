@@ -151,10 +151,17 @@ public class UserInterface {
                                 if(player.getEquippedWeapon().isRanged() && player.getEquippedWeapon().getRemainingAmmo() != 0){
                                     player.getEquippedWeapon().removeRemainingAmmo();
                                 }
-                                player.getHit(player.getCurrentRoom().getEnemy(commandInput[1]).getWeapon().getDamage());
-                                System.out.println("The " + commandInput[1] + " attacks you for " + player.getCurrentRoom().getEnemy(commandInput[1]).getWeapon().getDamage() + " damage!");
-                                System.out.println(player.getHealth());
-                                System.out.println(player.getCurrentRoom().getClosestEnemy().getHealthPoints());
+                                if(player.getCurrentRoom().getEnemy(commandInput[1]).getHealthPoints() > 0) {
+                                    player.getHit(player.getCurrentRoom().getEnemy(commandInput[1]).getWeapon().getDamage());
+                                    System.out.println("The " + commandInput[1] + " attacks you for " + player.getCurrentRoom().getEnemy(commandInput[1]).getWeapon().getDamage() + " damage!");
+                                } else {
+                                    System.out.println("You've killed the " + commandInput[1] + "!");
+                                    player.getCurrentRoom().getEnemyList().remove(player.getCurrentRoom().getEnemy(commandInput[1]));
+                                }if (player.getHealth() <= 0){
+                                    System.out.println("\nYou have been killed by the " + commandInput[1] + "!\n" +
+                                            "Game over! Better luck next time!");
+                                        System.exit(1);
+                                }
                             }else System.out.println("There is no " + commandInput[1] + " for you to attack here.");
                         } else System.out.println("There is no enemy here for you to attack.");
                     } else System.out.println("Please state which enemy you wish to attack.");
