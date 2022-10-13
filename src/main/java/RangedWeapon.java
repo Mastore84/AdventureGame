@@ -14,7 +14,4 @@ public class RangedWeapon extends Weapon{
         remainingAmmo = remainingAmmo - 1;
     }
 
-   /* public AttackEnum attack(){
-    return AttackEnum.Fire;
-*/
 }

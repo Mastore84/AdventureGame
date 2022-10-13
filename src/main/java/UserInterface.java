@@ -167,8 +167,6 @@ public class UserInterface {
                     } else System.out.println("Please state which enemy you wish to attack.");
                 }else System.out.println("You cannot attack without a weapon equipped!");
             }
-            //if enemy is dead, remove enemy
-            //if player is dead, game ends
 
             //health command
             else if (userInput.equalsIgnoreCase("health")) {

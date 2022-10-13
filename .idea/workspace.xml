@@ -4,10 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="72ee6e95-e1e1-4c81-9838-b6e7eb9496e8" name="Changes" comment="changed help command slightly">
+    <list default="true" id="72ee6e95-e1e1-4c81-9838-b6e7eb9496e8" name="Changes" comment="finished attack command and added functionality for player and enemy deaths">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Map.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Map.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/UserInterface.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/UserInterface.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/MeleeWeapon.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/MeleeWeapon.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Player.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Player.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/RangedWeapon.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/RangedWeapon.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Room.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Room.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -258,7 +260,14 @@
       <option name="project" value="LOCAL" />
       <updated>1665574365346</updated>
     </task>
-    <option name="localTasksCounter" value="31" />
+    <task id="LOCAL-00031" summary="finished attack command and added functionality for player and enemy deaths">
+      <created>1665646238481</created>
+      <option name="number" value="00031" />
+      <option name="presentableId" value="LOCAL-00031" />
+      <option name="project" value="LOCAL" />
+      <updated>1665646238481</updated>
+    </task>
+    <option name="localTasksCounter" value="32" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -273,7 +282,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Added descriptions and implemented look function properly." />
     <MESSAGE value="Added workspace.xml file (re-commit)" />
     <MESSAGE value="Added Map class" />
     <MESSAGE value="got moving between rooms and look to work (I hope)" />
@@ -298,7 +306,8 @@
     <MESSAGE value="attack command in progress (not finished but current code is working)" />
     <MESSAGE value="attack function working,&#10;still need to code functionality regarding player and enemy death" />
     <MESSAGE value="changed help command slightly" />
-    <option name="LAST_COMMIT_MESSAGE" value="changed help command slightly" />
+    <MESSAGE value="finished attack command and added functionality for player and enemy deaths" />
+    <option name="LAST_COMMIT_MESSAGE" value="finished attack command and added functionality for player and enemy deaths" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

@@ -143,10 +143,6 @@ public class Room {
         }return null;
     }
 
-    public Enemy getClosestEnemy(){
-        return enemies.get(0);
-    }
-
     //display items and enemies in a room when using the 'look' command
     public void displayItems(){
         for (Item item : items) {

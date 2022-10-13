@@ -2,7 +2,7 @@ import java.util.ArrayList;
 
 public class Player {
     private Room currentRoom;
-    int hp;
+    private int hp;
     private ArrayList<Item> inventory;
     private ArrayList<Weapon> equippedWeapon;
 
