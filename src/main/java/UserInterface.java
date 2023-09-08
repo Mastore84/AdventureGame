@@ -100,7 +100,7 @@ public class UserInterface {
                 }
             }
             //look command
-            else if (userInput.equals("look")) {
+            else if (userInput.equalsIgnoreCase("look")) {
                 if (!player.getCurrentRoom().getItemList().isEmpty()) {
                     System.out.println(player.getRoomDescription());
                     System.out.println("You see the following item(s):");
