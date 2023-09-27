@@ -16,7 +16,7 @@ public class UserInterface {
         player = game.getPlayer();
         System.out.println("Welcome to the game! Type 'help' for a list of available commands\n" +
                 "type 'look' to get a description of your current room\n" +
-                "type 'exit' to exit the game\n" +
+                "type 'exit' or 'quit' to exit the game\n" +
                 "\nYou enter the castle. As you enter, the door shuts behind you. In vain, you attempt to open the door,\n" +
                 "only to discover that it has been locked up tight. You are trapped! Your only means of escape is to\n" +
                 "search the castle for a way out.\n" +
@@ -113,7 +113,7 @@ public class UserInterface {
 
             }
             //exit command
-            else if (userInput.equalsIgnoreCase("exit")) {
+            else if (userInput.equalsIgnoreCase("exit") || (userInput.equalsIgnoreCase("quit"))){
                 System.out.println("Goodbye! Thanks for playing!");
                 shouldContinue = false;
             }
@@ -134,7 +134,7 @@ public class UserInterface {
                         'unequip *item*': Unequip a weapon you have equipped.
                         'attack *enemy*': Attack an enemy.
                         'help': Display this help screen.
-                        'exit': Exits the game.
+                        'exit' or 'quit': Exits the game.
                                                             
                         """);
             }

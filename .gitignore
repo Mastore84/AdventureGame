@@ -2,3 +2,5 @@ target/
 .idea/
 out/
 *.iml
+.replit
+replit.nix
